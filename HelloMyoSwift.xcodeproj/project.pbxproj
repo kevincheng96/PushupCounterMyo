@@ -10,7 +10,6 @@
 		270BA99719FD04970066528B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 270BA99619FD04970066528B /* README.md */; };
 		270BA9A019FD18CB0066528B /* GLKitPolyfill.m in Sources */ = {isa = PBXBuildFile; fileRef = 270BA99F19FD18CB0066528B /* GLKitPolyfill.m */; };
 		278DAE4919FCAEC500EB804B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DAE4819FCAEC500EB804B /* AppDelegate.swift */; };
-		278DAE4C19FCAEC500EB804B /* HelloMyoSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 278DAE4A19FCAEC500EB804B /* HelloMyoSwift.xcdatamodeld */; };
 		278DAE4E19FCAEC500EB804B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DAE4D19FCAEC500EB804B /* ViewController.swift */; };
 		278DAE5119FCAEC500EB804B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE4F19FCAEC500EB804B /* Main.storyboard */; };
 		278DAE5319FCAEC500EB804B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE5219FCAEC500EB804B /* Images.xcassets */; };
@@ -25,7 +24,6 @@
 		278DAE4319FCAEC500EB804B /* HelloMyoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMyoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278DAE4719FCAEC500EB804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278DAE4819FCAEC500EB804B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		278DAE4B19FCAEC500EB804B /* HelloMyoSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HelloMyoSwift.xcdatamodel; sourceTree = "<group>"; };
 		278DAE4D19FCAEC500EB804B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		278DAE5019FCAEC500EB804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		278DAE5219FCAEC500EB804B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				278DAE4F19FCAEC500EB804B /* Main.storyboard */,
 				278DAE5219FCAEC500EB804B /* Images.xcassets */,
 				278DAE5419FCAEC500EB804B /* LaunchScreen.xib */,
-				278DAE4A19FCAEC500EB804B /* HelloMyoSwift.xcdatamodeld */,
 				278DAE4619FCAEC500EB804B /* Supporting Files */,
 			);
 			path = HelloMyoSwift;
@@ -215,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				278DAE4E19FCAEC500EB804B /* ViewController.swift in Sources */,
-				278DAE4C19FCAEC500EB804B /* HelloMyoSwift.xcdatamodeld in Sources */,
 				270BA9A019FD18CB0066528B /* GLKitPolyfill.m in Sources */,
 				270BA99719FD04970066528B /* README.md in Sources */,
 				278DAE4919FCAEC500EB804B /* AppDelegate.swift in Sources */,
@@ -369,19 +365,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		278DAE4A19FCAEC500EB804B /* HelloMyoSwift.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				278DAE4B19FCAEC500EB804B /* HelloMyoSwift.xcdatamodel */,
-			);
-			currentVersion = 278DAE4B19FCAEC500EB804B /* HelloMyoSwift.xcdatamodel */;
-			path = HelloMyoSwift.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 278DAE3B19FCAEC500EB804B /* Project object */;
 }
