@@ -1,9 +1,4 @@
-# MYO Demo Application for iOS
+# iOS Pushup Counter using the Myo armband
+Project for 2016 Hack Illinois
 
-Re-write of the original [Myo iOS app](https://developer.thalmic.com/downloads) that comes with the SDK in Swift.
-
-# Changes
-
-* Added Cocoapods for dependency managemnet.
-* Removed usless comments - the philoshipy is to keep it short and let the code speak for itself.
-* Add vibration on sync/unsync gesture - similar to the way the desktop Mac app works.
+Tracks the movement of the Myo armband using Euler angles (pitch, yaw, and roll) to accurately count a user's pushups.
