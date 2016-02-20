@@ -17,12 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var rowText: UITextField!
     @IBOutlet weak var num: UITextField!
     @IBOutlet weak var pitchText: UITextField!
-    var pushUpsDone = 0
+    var pushUpsDone = 0 // pushup counters
     var currentPose: TLMPose!
-    var pushUpState = 0
-    var startPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)?
-    var currentPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)?
-    var quaternionCounter = 0
+    var pushUpState = 0 // finite state machine (0=top of pushup, 1=bottom of pushup)
+    var startPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)? // Euler angles
+    var currentPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)? // Euler angles
+    var quaternionCounter = 0 // counter to limit the amount of times that app receives orientation events
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +32,6 @@ class ViewController: UIViewController {
         // Data notifications are received through NSNotificationCenter.
         notifier.addObserver(self, selector: "didConnectDevice:", name: TLMHubDidConnectDeviceNotification, object: nil)
         notifier.addObserver(self, selector: "didDisconnectDevice:", name: TLMHubDidDisconnectDeviceNotification, object: nil)
-        // Posted whenever the user does a Sync Gesture, and the Myo is calibrated
-        //notifier.addObserver(self, selector: "didRecognizeArm:", name: TLMMyoDidReceiveArmRecognizedEventNotification, object: nil)
-        // Posted whenever Myo loses its calibration (when Myo is taken off, or moved enough on the user's arm)
-        //notifier.addObserver(self, selector: "didLoseArm:", name: TLMMyoDidReceiveArmLostEventNotification, object: nil)
         
         // Notifications for orientation event are posted at a rate of 50 Hz.
         notifier.addObserver(self, selector: "didRecieveOrientationEvent:", name: TLMMyoDidReceiveOrientationEventNotification, object: nil)
@@ -80,30 +76,8 @@ class ViewController: UIViewController {
         accelerationLabel.hidden = true
     }
     
-    /*func didRecognizeArm(notification: NSNotification) {
-    let eventData = notification.userInfo as! Dictionary<NSString, TLMArmRecognizedEvent>
-    let armEvent = eventData[kTLMKeyArmRecognizedEvent]!
-    
-    var arm = armEvent.arm == .Right ? "Right" : "Left"
-    var direction = armEvent.xDirection == .TowardWrist ? "Towards Wrist" : "Toward Elbow"
-    armLabel.text = "Arm: \(arm) X-Direction: \(direction)"
-    helloLabel.textColor = UIColor.blueColor()
-    
-    armEvent.myo!.vibrateWithLength(.Short)
-    }
-    */
-    /* func didLoseArm(notification: NSNotification) {
-    armLabel.text = "Perform the Sync Gesture"
-    helloLabel.text = "Hello Myo"
-    helloLabel.textColor = UIColor.blackColor()
-    
-    let eventData = notification.userInfo as! Dictionary<NSString, TLMArmLostEvent>
-    let armEvent = eventData[kTLMKeyArmLostEvent]!
-    armEvent.myo!.vibrateWithLength(.Short)
-    }*/
-    
     func didRecieveOrientationEvent(notification: NSNotification) {
-        quaternionCounter++
+        quaternionCounter++ // counter to limit calls to ReceiveOrientationEvent
         if (quaternionCounter < 7) {
             return
         }
@@ -126,25 +100,21 @@ class ViewController: UIViewController {
         if (startPosition != nil) {
             if (pushUpState == 0) {
                 //if position is within some given range, change pushUpState=1
-                //let yawDiff = currentPosition!.yaw - startPosition!.yaw //use abs value / 2 for EMERGENCY SIUTATION
-                //if (yawDiff > 1.3) { //1.3
                 let pitchDiff = currentPosition!.pitch - startPosition!.pitch
-                if (pitchDiff > 0) {
+                if (pitchDiff > 0) { // pitch difference threshold
                     let rollDiff = currentPosition!.roll - startPosition!.roll
-                    if (rollDiff < -1.1) { //-1.1
-                        pushUpState = 1
+                    if (rollDiff < -1.1) { // roll difference threshold
+                        pushUpState = 1 // change state to 1
                         startPosition = currentPosition
                         stateText.text = "down"
                     }
                 }
             } else if (pushUpState == 1) {
-                //let yawDiff = currentPosition!.yaw - startPosition!.yaw
-                //if (yawDiff < -1.2) {
                 let pitchDiff = currentPosition!.pitch - startPosition!.pitch
-                if (pitchDiff < 0) {
+                if (pitchDiff < 0) { // pitch difference threshold
                     let rollDiff = currentPosition!.roll - startPosition!.roll
-                    if (rollDiff > 1.1) {
-                        pushUpState = 0
+                    if (rollDiff > 1.1) { // roll difference threshold
+                        pushUpState = 0 // change state to 0
                         pushUpsDone += 1
                         startPosition = currentPosition
                         num.text = String(pushUpsDone)
