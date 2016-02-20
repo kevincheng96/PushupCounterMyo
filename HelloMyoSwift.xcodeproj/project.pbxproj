@@ -14,6 +14,7 @@
 		278DAE5119FCAEC500EB804B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE4F19FCAEC500EB804B /* Main.storyboard */; };
 		278DAE5319FCAEC500EB804B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE5219FCAEC500EB804B /* Images.xcassets */; };
 		278DAE5619FCAEC500EB804B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE5419FCAEC500EB804B /* LaunchScreen.xib */; };
+		52EDBF861C78C7B200A7A20F /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBF851C78C7B200A7A20F /* MyoKit.framework */; };
 		BEF4A774F5A7A6AB22605B28 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 869B6ED8684B18C6BE583A7E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		278DAE5219FCAEC500EB804B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		278DAE5519FCAEC500EB804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		278DAE6C19FCB99900EB804B /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		52EDBF851C78C7B200A7A20F /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = Pods/MyoSDK/MyoKit.framework; sourceTree = "<group>"; };
 		869B6ED8684B18C6BE583A7E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA75DC7AF6F87C17E5EF92BB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE50A6670235612D10857420 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EDBF861C78C7B200A7A20F /* MyoKit.framework in Frameworks */,
 				BEF4A774F5A7A6AB22605B28 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		8AFF1003E13A87D48903FBD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52EDBF851C78C7B200A7A20F /* MyoKit.framework */,
 				869B6ED8684B18C6BE583A7E /* libPods.a */,
 			);
 			name = Frameworks;
@@ -134,11 +138,14 @@
 		278DAE3B19FCAEC500EB804B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Michael Yagudaev";
 				TargetAttributes = {
 					278DAE4219FCAEC500EB804B = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = Z84U66EYPZ;
 					};
 				};
 			};
@@ -259,6 +266,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -302,6 +310,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -324,9 +333,17 @@
 			baseConfigurationReference = DA75DC7AF6F87C17E5EF92BB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/MyoSDK",
+				);
 				INFOPLIST_FILE = HelloMyoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aiqiliu.HelloMyoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Debug;
@@ -336,9 +353,17 @@
 			baseConfigurationReference = DE50A6670235612D10857420 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/MyoSDK",
+				);
 				INFOPLIST_FILE = HelloMyoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aiqiliu.HelloMyoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Release;

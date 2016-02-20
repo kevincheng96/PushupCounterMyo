@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C5799279B946F5200577EF4B07E5197F26088DCB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "707A5AA9DED5B3CEF15EEBA6C16AE5D3CD9906BC" : 0,
+    "C5799279B946F5200577EF4B07E5197F26088DCB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FD45879A-1C50-439F-8095-ECAADA55F90F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "707A5AA9DED5B3CEF15EEBA6C16AE5D3CD9906BC" : "",
+    "C5799279B946F5200577EF4B07E5197F26088DCB" : "HelloMyoSwift"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HelloMyoSwift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HelloMyoSwift.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aiqiliu\/HackIllinois2016.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "707A5AA9DED5B3CEF15EEBA6C16AE5D3CD9906BC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yagudaev\/HelloMyoSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C5799279B946F5200577EF4B07E5197F26088DCB"
+    }
+  ]
+}
