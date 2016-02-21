@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
             endingLineNumber = "123"
-            landmarkName = "didRecieveOrientationEvent(_:)"
+            landmarkName = "getCurrentPosition(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
             endingLineNumber = "122"
-            landmarkName = "didRecieveOrientationEvent(_:)"
+            landmarkName = "getCurrentPosition(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,8 +47,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
             endingLineNumber = "121"
-            landmarkName = "didRecieveOrientationEvent(_:)"
-            landmarkType = "5">
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
