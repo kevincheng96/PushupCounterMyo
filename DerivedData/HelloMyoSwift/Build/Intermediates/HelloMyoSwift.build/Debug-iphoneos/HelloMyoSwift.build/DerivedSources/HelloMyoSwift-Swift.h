@@ -142,6 +142,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 @property (nonatomic, copy) NSString * __null_unspecified dicPath;
 @property (nonatomic, copy) NSArray<NSString *> * __nonnull words;
 @property (nonatomic, copy) NSString * __null_unspecified currentWord;
+@property (nonatomic) NSInteger stop;
 @property (nonatomic) NSInteger start;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
@@ -160,6 +161,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 - (void)pocketsphinxDidStartListening;
 - (void)startListening;
 - (void)pocketsphinxDidDetectSpeech;
+- (void)countDown;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

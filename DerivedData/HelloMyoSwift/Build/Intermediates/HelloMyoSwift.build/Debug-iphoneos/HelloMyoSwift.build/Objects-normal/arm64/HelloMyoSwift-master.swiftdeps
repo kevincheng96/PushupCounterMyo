@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
 options: "2d0133408ae2aad0a89123b426552dab"
-build_time: [509344376, 48159000]
+build_time: [509350155, 325699000]
 inputs:
+  "/Users/john/Desktop/PushupCounterMyo/HelloMyoSwift/ViewController.swift": [509350155, 0]
   "/Users/john/Desktop/PushupCounterMyo/HelloMyoSwift/AppDelegate.swift": [509326022, 0]
-  "/Users/john/Desktop/PushupCounterMyo/HelloMyoSwift/ViewController.swift": [509344234, 0]

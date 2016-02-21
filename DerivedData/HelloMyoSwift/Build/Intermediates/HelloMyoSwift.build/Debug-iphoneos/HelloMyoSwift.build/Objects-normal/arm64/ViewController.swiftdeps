@@ -6,100 +6,103 @@ provides-nominal:
 provides-member:
 - ["C13HelloMyoSwift14ViewController", ""]
 provides-dynamic-lookup:
-- "pocketsphinxDidReceiveHypothesis"
 - "viewDidLoad"
-- "startListening"
-- "gyroscopeLabel"
-- "openEarsEventsObserver"
-- "start"
-- "pushUpState"
 - "getCurrentPosition"
-- "rowText"
-- "didRecieveGyroScopeEvent"
-- "currentPose"
-- "didDisconnectDevice"
-- "quaternionCounter"
+- "didRecieveOrientationEvent"
+- "gyroscopeLabel"
+- "num"
+- "lmPath"
+- "button1"
+- "didTapSettings"
+- "dicPath"
 - "pocketsphinxDidDetectSpeech"
+- "startListening"
 - "viewDidDisappear"
+- "openEarsEventsObserver"
+- "pushUpState"
+- "start"
+- "armLabel"
+- "viewDidAppear"
+- "rowText"
 - "accelerationLabel"
+- "stop"
+- "countDown"
+- "didDisconnectDevice"
+- "didConnectDevice"
+- "didRecieveAccelerationEvent"
+- "helloLabel"
 - "stateText"
 - "currentWord"
-- "didTapSettings"
-- "didRecieveOrientationEvent"
-- "armLabel"
 - "loadOpenEars"
+- "didRecieveGyroScopeEvent"
+- "currentPose"
+- "quaternionCounter"
 - "yawText"
-- "pushText"
-- "didChangePose"
 - "words"
-- "didConnectDevice"
-- "pitchText"
-- "pocketsphinxDidStartListening"
-- "helloLabel"
-- "pushUpsDone"
-- "viewDidAppear"
-- "num"
-- "dicPath"
-- "lmPath"
-- "accelerationProgressBar"
-- "button1"
-- "didRecieveAccelerationEvent"
 - "didReceiveMemoryWarning"
+- "pitchText"
+- "pushText"
+- "pushUpsDone"
+- "pocketsphinxDidReceiveHypothesis"
+- "pocketsphinxDidStartListening"
+- "didChangePose"
+- "accelerationProgressBar"
 depends-top-level:
-- !private "print"
-- !private "OEPocketsphinxController"
-- "UIButton"
-- !private "Dictionary"
-- !private "+="
-- !private "TLMOrientationEvent"
-- "ViewController"
-- !private "kTLMKeyAccelerometerEvent"
-- !private "TLMMyoDidReceivePoseChangedNotification"
-- "OEEventsObserver"
-- !private "OELanguageModelGenerator"
-- !private "CATransform3D"
-- "StringLiteralType"
-- !private "kTLMKeyPose"
-- "TLMPose"
-- !private "kTLMKeyOrientationEvent"
-- !private "/"
 - !private "TLMAccelerometerEvent"
-- !private ">"
-- !private "TLMMyoDidReceiveGyroscopeEventNotification"
-- !private "=="
+- "CGFloat"
+- "StringLiteralType"
+- "String"
+- !private "NSString"
+- !private "UIFont"
+- !private "TLMMyoDidReceiveAccelerometerEventNotification"
+- !private "TLMOrientationEvent"
+- !private "UIColor"
+- "UIViewController"
+- "ViewController"
+- !private "TLMGyroscopeEvent"
+- "Bool"
+- "OEEventsObserver"
+- !private "kTLMKeyAccelerometerEvent"
+- !private "OELanguageModelGenerator"
+- !private "kTLMKeyGyroscopeEvent"
+- !private "kTLMKeyOrientationEvent"
+- !private "+"
 - "AnyObject"
-- !private "CATransform3DRotate"
+- "UILabel"
+- !private "OEPocketsphinxController"
+- !private "TLMMyoDidReceiveOrientationEventNotification"
+- !private "+="
 - !private "<"
+- !private "!="
+- !private "-"
+- !private "CATransform3DRotate"
+- !private "TLMMyoDidReceiveGyroscopeEventNotification"
 - !private "CATransform3DIdentity"
 - !private "NSNotificationCenter"
-- "Array"
-- "NSNotification"
-- !private "GLKitPolyfill"
-- !private "TLMHubDidDisconnectDeviceNotification"
-- "UILabel"
-- !private "TLMMyoDidReceiveOrientationEventNotification"
-- !private "-"
-- !private "+"
-- "UIProgressView"
-- !private "++"
-- "UIViewController"
-- !private "NSString"
-- !private "TLMGyroscopeEvent"
-- !private "OEAcousticModel"
-- "OEEventsObserverDelegate"
-- !private "UIFont"
-- !private "TLMSettingsViewController"
-- "Bool"
-- !private "!="
-- "UITextField"
-- !private "BooleanLiteralType"
-- !private "TLMHubDidConnectDeviceNotification"
-- !private "TLMMyoDidReceiveAccelerometerEventNotification"
-- !private "kTLMKeyGyroscopeEvent"
-- !private "UIColor"
-- "CGFloat"
+- "TLMPose"
 - !private "CATransform3DConcat"
-- "String"
+- !private "TLMSettingsViewController"
+- !private "++"
+- !private "GLKitPolyfill"
+- !private "&&"
+- !private "kTLMKeyPose"
+- !private "print"
+- !private "TLMHubDidDisconnectDeviceNotification"
+- "UIProgressView"
+- "UIButton"
+- !private "=="
+- "Array"
+- "OEEventsObserverDelegate"
+- !private "OEAcousticModel"
+- "NSNotification"
+- !private "BooleanLiteralType"
+- !private "/"
+- !private "Dictionary"
+- !private "TLMMyoDidReceivePoseChangedNotification"
+- !private "CATransform3D"
+- "UITextField"
+- !private "TLMHubDidConnectDeviceNotification"
+- !private ">"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["CSo16AccelerationData", "magnitude"]
@@ -135,6 +138,7 @@ depends-member:
 - ["PSs9AnyObject", "audioSessionInterruptionDidEnd"]
 - !private ["PSs9AnyObject", "blackColor"]
 - ["PSs9AnyObject", "button1"]
+- ["PSs9AnyObject", "countDown"]
 - ["PSs9AnyObject", "currentPose"]
 - ["PSs9AnyObject", "currentPosition"]
 - ["PSs9AnyObject", "currentWord"]
@@ -202,6 +206,7 @@ depends-member:
 - !private ["PSs9AnyObject", "radians"]
 - !private ["PSs9AnyObject", "roll"]
 - ["PSs9AnyObject", "rowText"]
+- !private ["PSs9AnyObject", "secondsOfSilenceToDetect"]
 - !private ["PSs9AnyObject", "setActive"]
 - !private ["PSs9AnyObject", "settingsInNavigationController"]
 - !private ["PSs9AnyObject", "sharedInstance"]
@@ -210,11 +215,13 @@ depends-member:
 - !private ["PSs9AnyObject", "startListeningWithLanguageModelAtPath"]
 - ["PSs9AnyObject", "startPosition"]
 - ["PSs9AnyObject", "stateText"]
+- ["PSs9AnyObject", "stop"]
 - !private ["PSs9AnyObject", "text"]
 - !private ["PSs9AnyObject", "textColor"]
 - !private ["PSs9AnyObject", "transform"]
 - !private ["PSs9AnyObject", "type"]
 - !private ["PSs9AnyObject", "userInfo"]
+- !private ["PSs9AnyObject", "vadThreshold"]
 - ["PSs9AnyObject", "viewDidAppear"]
 - ["PSs9AnyObject", "viewDidDisappear"]
 - ["PSs9AnyObject", "viewDidLoad"]
@@ -264,6 +271,7 @@ depends-member:
 - ["PSs11CVarArgType", "audioSessionInterruptionDidEnd"]
 - !private ["PSs11CVarArgType", "blackColor"]
 - ["PSs11CVarArgType", "button1"]
+- ["PSs11CVarArgType", "countDown"]
 - ["PSs11CVarArgType", "currentPose"]
 - ["PSs11CVarArgType", "currentPosition"]
 - ["PSs11CVarArgType", "currentWord"]
@@ -331,6 +339,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "radians"]
 - !private ["PSs11CVarArgType", "roll"]
 - ["PSs11CVarArgType", "rowText"]
+- !private ["PSs11CVarArgType", "secondsOfSilenceToDetect"]
 - !private ["PSs11CVarArgType", "setActive"]
 - !private ["PSs11CVarArgType", "settingsInNavigationController"]
 - !private ["PSs11CVarArgType", "sharedInstance"]
@@ -339,11 +348,13 @@ depends-member:
 - !private ["PSs11CVarArgType", "startListeningWithLanguageModelAtPath"]
 - ["PSs11CVarArgType", "startPosition"]
 - ["PSs11CVarArgType", "stateText"]
+- ["PSs11CVarArgType", "stop"]
 - !private ["PSs11CVarArgType", "text"]
 - !private ["PSs11CVarArgType", "textColor"]
 - !private ["PSs11CVarArgType", "transform"]
 - !private ["PSs11CVarArgType", "type"]
 - !private ["PSs11CVarArgType", "userInfo"]
+- !private ["PSs11CVarArgType", "vadThreshold"]
 - ["PSs11CVarArgType", "viewDidAppear"]
 - ["PSs11CVarArgType", "viewDidDisappear"]
 - ["PSs11CVarArgType", "viewDidLoad"]
@@ -404,6 +415,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "audioSessionInterruptionDidEnd"]
 - !private ["PSs23CustomStringConvertible", "blackColor"]
 - ["PSs23CustomStringConvertible", "button1"]
+- ["PSs23CustomStringConvertible", "countDown"]
 - ["PSs23CustomStringConvertible", "currentPose"]
 - ["PSs23CustomStringConvertible", "currentPosition"]
 - ["PSs23CustomStringConvertible", "currentWord"]
@@ -471,6 +483,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "radians"]
 - !private ["PSs23CustomStringConvertible", "roll"]
 - ["PSs23CustomStringConvertible", "rowText"]
+- !private ["PSs23CustomStringConvertible", "secondsOfSilenceToDetect"]
 - !private ["PSs23CustomStringConvertible", "setActive"]
 - !private ["PSs23CustomStringConvertible", "settingsInNavigationController"]
 - !private ["PSs23CustomStringConvertible", "sharedInstance"]
@@ -479,12 +492,14 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "startListeningWithLanguageModelAtPath"]
 - ["PSs23CustomStringConvertible", "startPosition"]
 - ["PSs23CustomStringConvertible", "stateText"]
+- ["PSs23CustomStringConvertible", "stop"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "text"]
 - !private ["PSs23CustomStringConvertible", "textColor"]
 - !private ["PSs23CustomStringConvertible", "transform"]
 - !private ["PSs23CustomStringConvertible", "type"]
 - !private ["PSs23CustomStringConvertible", "userInfo"]
+- !private ["PSs23CustomStringConvertible", "vadThreshold"]
 - ["PSs23CustomStringConvertible", "viewDidAppear"]
 - ["PSs23CustomStringConvertible", "viewDidDisappear"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
@@ -545,6 +560,7 @@ depends-member:
 - ["PSs9Equatable", "audioSessionInterruptionDidEnd"]
 - !private ["PSs9Equatable", "blackColor"]
 - ["PSs9Equatable", "button1"]
+- ["PSs9Equatable", "countDown"]
 - ["PSs9Equatable", "currentPose"]
 - ["PSs9Equatable", "currentPosition"]
 - ["PSs9Equatable", "currentWord"]
@@ -612,6 +628,7 @@ depends-member:
 - !private ["PSs9Equatable", "radians"]
 - !private ["PSs9Equatable", "roll"]
 - ["PSs9Equatable", "rowText"]
+- !private ["PSs9Equatable", "secondsOfSilenceToDetect"]
 - !private ["PSs9Equatable", "setActive"]
 - !private ["PSs9Equatable", "settingsInNavigationController"]
 - !private ["PSs9Equatable", "sharedInstance"]
@@ -620,11 +637,13 @@ depends-member:
 - !private ["PSs9Equatable", "startListeningWithLanguageModelAtPath"]
 - ["PSs9Equatable", "startPosition"]
 - ["PSs9Equatable", "stateText"]
+- ["PSs9Equatable", "stop"]
 - !private ["PSs9Equatable", "text"]
 - !private ["PSs9Equatable", "textColor"]
 - !private ["PSs9Equatable", "transform"]
 - !private ["PSs9Equatable", "type"]
 - !private ["PSs9Equatable", "userInfo"]
+- !private ["PSs9Equatable", "vadThreshold"]
 - ["PSs9Equatable", "viewDidAppear"]
 - ["PSs9Equatable", "viewDidDisappear"]
 - ["PSs9Equatable", "viewDidLoad"]
@@ -680,6 +699,7 @@ depends-member:
 - ["PSs8Hashable", "audioSessionInterruptionDidEnd"]
 - !private ["PSs8Hashable", "blackColor"]
 - ["PSs8Hashable", "button1"]
+- ["PSs8Hashable", "countDown"]
 - ["PSs8Hashable", "currentPose"]
 - ["PSs8Hashable", "currentPosition"]
 - ["PSs8Hashable", "currentWord"]
@@ -747,6 +767,7 @@ depends-member:
 - !private ["PSs8Hashable", "radians"]
 - !private ["PSs8Hashable", "roll"]
 - ["PSs8Hashable", "rowText"]
+- !private ["PSs8Hashable", "secondsOfSilenceToDetect"]
 - !private ["PSs8Hashable", "setActive"]
 - !private ["PSs8Hashable", "settingsInNavigationController"]
 - !private ["PSs8Hashable", "sharedInstance"]
@@ -755,11 +776,13 @@ depends-member:
 - !private ["PSs8Hashable", "startListeningWithLanguageModelAtPath"]
 - ["PSs8Hashable", "startPosition"]
 - ["PSs8Hashable", "stateText"]
+- ["PSs8Hashable", "stop"]
 - !private ["PSs8Hashable", "text"]
 - !private ["PSs8Hashable", "textColor"]
 - !private ["PSs8Hashable", "transform"]
 - !private ["PSs8Hashable", "type"]
 - !private ["PSs8Hashable", "userInfo"]
+- !private ["PSs8Hashable", "vadThreshold"]
 - ["PSs8Hashable", "viewDidAppear"]
 - ["PSs8Hashable", "viewDidDisappear"]
 - ["PSs8Hashable", "viewDidLoad"]
@@ -813,6 +836,7 @@ depends-member:
 - ["PSo8NSCoding", "audioSessionInterruptionDidEnd"]
 - !private ["PSo8NSCoding", "blackColor"]
 - ["PSo8NSCoding", "button1"]
+- ["PSo8NSCoding", "countDown"]
 - ["PSo8NSCoding", "currentPose"]
 - ["PSo8NSCoding", "currentPosition"]
 - ["PSo8NSCoding", "currentWord"]
@@ -872,6 +896,7 @@ depends-member:
 - ["PSo8NSCoding", "startListening"]
 - ["PSo8NSCoding", "startPosition"]
 - ["PSo8NSCoding", "stateText"]
+- ["PSo8NSCoding", "stop"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "transform"]
@@ -918,6 +943,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "audioSessionInterruptionDidBegin"]
 - ["PSo26NSExtensionRequestHandling", "audioSessionInterruptionDidEnd"]
 - ["PSo26NSExtensionRequestHandling", "button1"]
+- ["PSo26NSExtensionRequestHandling", "countDown"]
 - ["PSo26NSExtensionRequestHandling", "currentPose"]
 - ["PSo26NSExtensionRequestHandling", "currentPosition"]
 - ["PSo26NSExtensionRequestHandling", "currentWord"]
@@ -972,6 +998,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "startListening"]
 - ["PSo26NSExtensionRequestHandling", "startPosition"]
 - ["PSo26NSExtensionRequestHandling", "stateText"]
+- ["PSo26NSExtensionRequestHandling", "stop"]
 - ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidDisappear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -1028,6 +1055,7 @@ depends-member:
 - ["CSo8NSObject", "audioSessionInterruptionDidEnd"]
 - !private ["CSo8NSObject", "blackColor"]
 - ["CSo8NSObject", "button1"]
+- ["CSo8NSObject", "countDown"]
 - ["CSo8NSObject", "currentPose"]
 - ["CSo8NSObject", "currentPosition"]
 - ["CSo8NSObject", "currentWord"]
@@ -1095,6 +1123,7 @@ depends-member:
 - !private ["CSo8NSObject", "radians"]
 - !private ["CSo8NSObject", "roll"]
 - ["CSo8NSObject", "rowText"]
+- !private ["CSo8NSObject", "secondsOfSilenceToDetect"]
 - !private ["CSo8NSObject", "setActive"]
 - !private ["CSo8NSObject", "settingsInNavigationController"]
 - !private ["CSo8NSObject", "sharedInstance"]
@@ -1103,11 +1132,13 @@ depends-member:
 - !private ["CSo8NSObject", "startListeningWithLanguageModelAtPath"]
 - ["CSo8NSObject", "startPosition"]
 - ["CSo8NSObject", "stateText"]
+- ["CSo8NSObject", "stop"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "transform"]
 - !private ["CSo8NSObject", "type"]
 - !private ["CSo8NSObject", "userInfo"]
+- !private ["CSo8NSObject", "vadThreshold"]
 - ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidDisappear"]
 - ["CSo8NSObject", "viewDidLoad"]
@@ -1146,6 +1177,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "audioSessionInterruptionDidEnd"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
 - ["PSo16NSObjectProtocol", "button1"]
+- ["PSo16NSObjectProtocol", "countDown"]
 - ["PSo16NSObjectProtocol", "currentPose"]
 - ["PSo16NSObjectProtocol", "currentPosition"]
 - ["PSo16NSObjectProtocol", "currentWord"]
@@ -1213,6 +1245,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "radians"]
 - !private ["PSo16NSObjectProtocol", "roll"]
 - ["PSo16NSObjectProtocol", "rowText"]
+- !private ["PSo16NSObjectProtocol", "secondsOfSilenceToDetect"]
 - !private ["PSo16NSObjectProtocol", "setActive"]
 - !private ["PSo16NSObjectProtocol", "settingsInNavigationController"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
@@ -1221,11 +1254,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "startListeningWithLanguageModelAtPath"]
 - ["PSo16NSObjectProtocol", "startPosition"]
 - ["PSo16NSObjectProtocol", "stateText"]
+- ["PSo16NSObjectProtocol", "stop"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "transform"]
 - !private ["PSo16NSObjectProtocol", "type"]
 - !private ["PSo16NSObjectProtocol", "userInfo"]
+- !private ["PSo16NSObjectProtocol", "vadThreshold"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidDisappear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
@@ -1308,6 +1343,7 @@ depends-member:
 - !private ["PSo24OEEventsObserverDelegate", "pushUpsDone"]
 - !private ["PSo24OEEventsObserverDelegate", "quaternionCounter"]
 - !private ["PSo24OEEventsObserverDelegate", "rowText"]
+- !private ["PSo24OEEventsObserverDelegate", "secondsOfSilenceToDetect"]
 - !private ["PSo24OEEventsObserverDelegate", "setActive"]
 - !private ["PSo24OEEventsObserverDelegate", "sharedInstance"]
 - !private ["PSo24OEEventsObserverDelegate", "start"]
@@ -1315,6 +1351,8 @@ depends-member:
 - !private ["PSo24OEEventsObserverDelegate", "startListeningWithLanguageModelAtPath"]
 - !private ["PSo24OEEventsObserverDelegate", "startPosition"]
 - !private ["PSo24OEEventsObserverDelegate", "stateText"]
+- !private ["PSo24OEEventsObserverDelegate", "stop"]
+- !private ["PSo24OEEventsObserverDelegate", "vadThreshold"]
 - !private ["PSo24OEEventsObserverDelegate", "words"]
 - !private ["PSo24OEEventsObserverDelegate", "yawText"]
 - ["PSo24OEEventsObserverDelegate", ""]
@@ -1326,9 +1364,11 @@ depends-member:
 - !private ["CSo24OELanguageModelGenerator", "init"]
 - !private ["CSo24OELanguageModelGenerator", "pathToSuccessfullyGeneratedDictionaryWithRequestedName"]
 - !private ["CSo24OELanguageModelGenerator", "pathToSuccessfullyGeneratedLanguageModelWithRequestedName"]
+- !private ["CSo24OEPocketsphinxController", "secondsOfSilenceToDetect"]
 - !private ["CSo24OEPocketsphinxController", "setActive"]
 - !private ["CSo24OEPocketsphinxController", "sharedInstance"]
 - !private ["CSo24OEPocketsphinxController", "startListeningWithLanguageModelAtPath"]
+- !private ["CSo24OEPocketsphinxController", "vadThreshold"]
 - !private ["Sq", "deinit"]
 - !private ["CSo15OrientationData", "pitch"]
 - !private ["CSo15OrientationData", "roll"]
@@ -1408,6 +1448,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "audioSessionInterruptionDidBegin"]
 - ["PSo21UIAppearanceContainer", "audioSessionInterruptionDidEnd"]
 - ["PSo21UIAppearanceContainer", "button1"]
+- ["PSo21UIAppearanceContainer", "countDown"]
 - ["PSo21UIAppearanceContainer", "currentPose"]
 - ["PSo21UIAppearanceContainer", "currentPosition"]
 - ["PSo21UIAppearanceContainer", "currentWord"]
@@ -1466,6 +1507,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "startListening"]
 - ["PSo21UIAppearanceContainer", "startPosition"]
 - ["PSo21UIAppearanceContainer", "stateText"]
+- ["PSo21UIAppearanceContainer", "stop"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
@@ -1507,6 +1549,7 @@ depends-member:
 - ["PSo18UIContentContainer", "audioSessionInterruptionDidBegin"]
 - ["PSo18UIContentContainer", "audioSessionInterruptionDidEnd"]
 - ["PSo18UIContentContainer", "button1"]
+- ["PSo18UIContentContainer", "countDown"]
 - ["PSo18UIContentContainer", "currentPose"]
 - ["PSo18UIContentContainer", "currentPosition"]
 - ["PSo18UIContentContainer", "currentWord"]
@@ -1561,6 +1604,7 @@ depends-member:
 - ["PSo18UIContentContainer", "startListening"]
 - ["PSo18UIContentContainer", "startPosition"]
 - ["PSo18UIContentContainer", "stateText"]
+- ["PSo18UIContentContainer", "stop"]
 - ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidDisappear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -1611,6 +1655,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "audioSessionInterruptionDidBegin"]
 - ["PSo18UIFocusEnvironment", "audioSessionInterruptionDidEnd"]
 - ["PSo18UIFocusEnvironment", "button1"]
+- ["PSo18UIFocusEnvironment", "countDown"]
 - ["PSo18UIFocusEnvironment", "currentPose"]
 - ["PSo18UIFocusEnvironment", "currentPosition"]
 - ["PSo18UIFocusEnvironment", "currentWord"]
@@ -1669,6 +1714,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "startListening"]
 - ["PSo18UIFocusEnvironment", "startPosition"]
 - ["PSo18UIFocusEnvironment", "stateText"]
+- ["PSo18UIFocusEnvironment", "stop"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
@@ -1731,6 +1777,7 @@ depends-member:
 - ["CSo11UIResponder", "audioSessionInterruptionDidBegin"]
 - ["CSo11UIResponder", "audioSessionInterruptionDidEnd"]
 - ["CSo11UIResponder", "button1"]
+- ["CSo11UIResponder", "countDown"]
 - ["CSo11UIResponder", "currentPose"]
 - ["CSo11UIResponder", "currentPosition"]
 - ["CSo11UIResponder", "currentWord"]
@@ -1789,6 +1836,7 @@ depends-member:
 - ["CSo11UIResponder", "startListening"]
 - ["CSo11UIResponder", "startPosition"]
 - ["CSo11UIResponder", "stateText"]
+- ["CSo11UIResponder", "stop"]
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "textColor"]
 - ["CSo11UIResponder", "viewDidAppear"]
@@ -1826,6 +1874,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "audioSessionInterruptionDidBegin"]
 - ["PSo16UIStateRestoring", "audioSessionInterruptionDidEnd"]
 - ["PSo16UIStateRestoring", "button1"]
+- ["PSo16UIStateRestoring", "countDown"]
 - ["PSo16UIStateRestoring", "currentPose"]
 - ["PSo16UIStateRestoring", "currentPosition"]
 - ["PSo16UIStateRestoring", "currentWord"]
@@ -1880,6 +1929,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "startListening"]
 - ["PSo16UIStateRestoring", "startPosition"]
 - ["PSo16UIStateRestoring", "stateText"]
+- ["PSo16UIStateRestoring", "stop"]
 - ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidDisappear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -1922,6 +1972,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "audioSessionInterruptionDidBegin"]
 - ["PSo18UITraitEnvironment", "audioSessionInterruptionDidEnd"]
 - ["PSo18UITraitEnvironment", "button1"]
+- ["PSo18UITraitEnvironment", "countDown"]
 - ["PSo18UITraitEnvironment", "currentPose"]
 - ["PSo18UITraitEnvironment", "currentPosition"]
 - ["PSo18UITraitEnvironment", "currentWord"]
@@ -1980,6 +2031,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "startListening"]
 - ["PSo18UITraitEnvironment", "startPosition"]
 - ["PSo18UITraitEnvironment", "stateText"]
+- ["PSo18UITraitEnvironment", "stop"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
@@ -2038,6 +2090,7 @@ depends-member:
 - ["CSo16UIViewController", "audioSessionInterruptionDidBegin"]
 - ["CSo16UIViewController", "audioSessionInterruptionDidEnd"]
 - ["CSo16UIViewController", "button1"]
+- ["CSo16UIViewController", "countDown"]
 - ["CSo16UIViewController", "currentPose"]
 - ["CSo16UIViewController", "currentPosition"]
 - ["CSo16UIViewController", "currentWord"]
@@ -2092,6 +2145,7 @@ depends-member:
 - ["CSo16UIViewController", "startListening"]
 - ["CSo16UIViewController", "startPosition"]
 - ["CSo16UIViewController", "stateText"]
+- ["CSo16UIViewController", "stop"]
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidDisappear"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -2143,6 +2197,7 @@ depends-member:
 - ["C13HelloMyoSwift14ViewController", "audioSessionInterruptionDidBegin"]
 - ["C13HelloMyoSwift14ViewController", "audioSessionInterruptionDidEnd"]
 - ["C13HelloMyoSwift14ViewController", "button1"]
+- ["C13HelloMyoSwift14ViewController", "countDown"]
 - ["C13HelloMyoSwift14ViewController", "currentPose"]
 - ["C13HelloMyoSwift14ViewController", "currentPosition"]
 - ["C13HelloMyoSwift14ViewController", "currentWord"]
@@ -2197,6 +2252,7 @@ depends-member:
 - ["C13HelloMyoSwift14ViewController", "startListening"]
 - ["C13HelloMyoSwift14ViewController", "startPosition"]
 - ["C13HelloMyoSwift14ViewController", "stateText"]
+- ["C13HelloMyoSwift14ViewController", "stop"]
 - ["C13HelloMyoSwift14ViewController", "viewDidAppear"]
 - ["C13HelloMyoSwift14ViewController", "viewDidDisappear"]
 - ["C13HelloMyoSwift14ViewController", "viewDidLoad"]
@@ -2402,4 +2458,4 @@ depends-external:
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/sphinx_config.h"
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/OENotification.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "c859f2765e03a12d24b9d03a3158390c"
+interface-hash: "3d6fb3ceadebf3de4c49811ec09d5fb7"

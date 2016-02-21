@@ -24,13 +24,17 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     var currentPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)? // Euler angles
     var quaternionCounter = 0 // counter to limit the amount of times that app receives orientation events
     var openEarsEventsObserver = OEEventsObserver() //start listening to audios 
+    var timer = NSTimer()
+    
     
     var lmPath: String! //path to the English packet
     var dicPath: String! //path to dictionary
-    var words: Array<String> = ["START", "STOP"]
+    var words: Array<String> = ["START PUSHUP" , "STOP PUSHUP"]
     var currentWord: String!
     
+    var stop = 0
     var start = 0
+    
     
     
     override func viewDidLoad() {
@@ -58,7 +62,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         super.viewDidAppear(animated)
         pocketsphinxDidDetectSpeech() //detect if the user starts talking
 //        if(start == 0){
-//            pocketsphinxDidReceiveHypothesis("START", recognitionScore: "800", utteranceID: "")
+//            pocketsphinxDidReceiveHypothesis("START", recognitionScore: "20", utteranceID: "")
 //        }
         
     }
@@ -78,7 +82,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         presentViewController(controller, animated: true, completion: nil)
     }
     
-    @IBAction func getCurrentPosition(sender: AnyObject) {
+    @IBAction func getCurrentPosition(sender: AnyObject) { //initilaize the height
         startPosition = currentPosition
     }
     
@@ -123,7 +127,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         helloLabel.layer.transform = rotationAndPerspectiveTransform
         
         currentPosition = (pitch, yaw, roll)
-        if (startPosition != nil) {
+        if (startPosition != nil && stop == 0) { //execute when start is recognized and stop not recognized
             if (pushUpState == 0) {
                 //if position is within some given range, change pushUpState=1
                 let pitchDiff = currentPosition!.pitch - startPosition!.pitch
@@ -224,20 +228,23 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
         dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
     }
-    
+  
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        if hypothesis == "START" { // start recognized
+        if hypothesis == "START PUSHUP" && start == 0 { // start recognized the first time
             //do what you want here when the correct word is recognized
+            startPosition = currentPosition
             start = 1
+           // countDown() //start countdown
+            print("start is : " + String(start))
+          
         }
-        print("our hypothesis is: " + hypothesis)
-        print("start is" + String(start))
+        if hypothesis == "STOP PUSHUP" {
+            stop = 1
+            startPosition = nil
+            print("stop is : " + String(stop))
+        }
     }
-//    
-//    func getNewWord() { // get the current word
-//        var randomWord = Int(arc4random_uniform(UInt32(words.count)))
-//        currentWord = words[randomWord]
-//    }
+
 
     func pocketsphinxDidStartListening() {
         print("Pocketsphinx is now listening.")
@@ -246,7 +253,10 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     func startListening() {
         do {
             try OEPocketsphinxController.sharedInstance().setActive(true)
+            OEPocketsphinxController.sharedInstance().secondsOfSilenceToDetect = 0.001
+            OEPocketsphinxController.sharedInstance().vadThreshold = 1.5
             OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+            
         } catch {
             print("doesn't start listening")
         }
@@ -255,6 +265,12 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     func pocketsphinxDidDetectSpeech() {
         print("Pocketsphinx has detected speech.")
     }
+    
+    func countDown() {
+        
+    }
+    
+    
     
 }
 
