@@ -114,6 +114,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift11AppDelegate")
 @class NSTimer;
 @class NSUserDefaults;
 @class NSNotification;
+@class UIImageView;
 @class UILabel;
 @class UITextField;
 @class UIButton;
@@ -122,13 +123,15 @@ SWIFT_CLASS("_TtC13HelloMyoSwift11AppDelegate")
 
 SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 @interface ViewController : UIViewController <OEEventsObserverDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified armBand;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified highscoreLabel;
-@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified num;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified backgroundImage;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified pushText;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified connectButton;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified startButton;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified reset;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified stopButton;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified num;
 @property (nonatomic) NSInteger pushUpsDone;
 @property (nonatomic, strong) TLMPose * __null_unspecified currentPose;
 @property (nonatomic) NSInteger pushUpState;

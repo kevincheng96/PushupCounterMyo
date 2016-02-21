@@ -6,106 +6,109 @@ provides-nominal:
 provides-member:
 - ["C13HelloMyoSwift14ViewController", ""]
 provides-dynamic-lookup:
-- "num"
-- "tempCount"
-- "pocketsphinxDidDetectSpeech"
-- "pushUpsDone"
-- "highscore"
-- "didReceiveMemoryWarning"
 - "stopButton"
-- "pocketsphinxDidStartListening"
-- "currentWord"
-- "update"
-- "quaternionCounter"
-- "start"
-- "currentPose"
-- "didRecieveGyroScopeEvent"
-- "pushText"
-- "viewDidLoad"
 - "resetButton"
-- "connectButton"
-- "lmPath"
-- "didRecieveOrientationEvent"
-- "viewDidAppear"
-- "stop"
-- "sum"
-- "stopPushUps"
-- "didRecieveAccelerationEvent"
-- "words"
-- "getCurrentPosition"
-- "openEarsEventsObserver"
-- "counter"
-- "startButton"
-- "pushUpState"
-- "dicPath"
-- "viewDidDisappear"
-- "didDisconnectDevice"
 - "defaults"
-- "quarternionCounter"
-- "timer"
-- "pocketsphinxDidReceiveHypothesis"
-- "loadOpenEars"
-- "didTapSettings"
-- "didConnectDevice"
+- "didRecieveOrientationEvent"
 - "highscoreLabel"
-- "startListening"
+- "viewDidAppear"
+- "didRecieveAccelerationEvent"
+- "stopPushUps"
+- "quarternionCounter"
+- "currentWord"
+- "num"
+- "words"
+- "pushText"
+- "sum"
+- "didReceiveMemoryWarning"
 - "reset"
+- "update"
+- "counter"
+- "loadOpenEars"
+- "getCurrentPosition"
+- "backgroundImage"
+- "timer"
+- "start"
+- "pocketsphinxDidStartListening"
+- "didConnectDevice"
+- "currentPose"
+- "quaternionCounter"
+- "startButton"
+- "didRecieveGyroScopeEvent"
+- "pocketsphinxDidReceiveHypothesis"
+- "openEarsEventsObserver"
+- "dicPath"
+- "lmPath"
+- "pushUpState"
+- "didTapSettings"
+- "pocketsphinxDidDetectSpeech"
+- "highscore"
+- "viewDidDisappear"
+- "stop"
+- "didDisconnectDevice"
+- "armBand"
+- "pushUpsDone"
+- "connectButton"
+- "viewDidLoad"
+- "tempCount"
+- "startListening"
 depends-top-level:
-- "UILabel"
-- "Int"
-- "NSNotification"
-- !private "TLMAccelerometerEvent"
-- !private "&&"
-- !private "OEAcousticModel"
-- !private "TLMOrientationEvent"
-- !private "Dictionary"
-- "UITextField"
-- !private "TLMMyoDidReceiveAccelerometerEventNotification"
-- !private "NSNotificationCenter"
-- !private "=="
-- !private "TLMMyoDidReceiveOrientationEventNotification"
+- !private "TLMMyoDidReceiveGyroscopeEventNotification"
+- !private ">"
+- !private "TLMHubDidDisconnectDeviceNotification"
+- !private "kTLMKeyAccelerometerEvent"
+- !private "BooleanLiteralType"
+- !private "UnicodeScalarType"
+- "NSUserDefaults"
+- !private "TLMGyroscopeEvent"
+- !private "+="
 - "Bool"
-- !private "CATransform3D"
-- "TLMPose"
-- "String"
+- !private "GLKitPolyfill"
+- !private "OEPocketsphinxController"
 - !private "TLMSettingsViewController"
+- "AnyObject"
+- !private "&&"
+- "UILabel"
+- !private "TLMMyoDidReceivePoseChangedNotification"
 - !private "NSString"
+- "OEEventsObserver"
+- "UIViewController"
+- !private "TLMHubDidConnectDeviceNotification"
 - !private "kTLMKeyOrientationEvent"
 - !private "kTLMKeyGyroscopeEvent"
-- "StringLiteralType"
-- !private "CATransform3DIdentity"
-- !private "OEPocketsphinxController"
-- !private "CATransform3DRotate"
-- "UIViewController"
-- "OEEventsObserver"
-- !private "+"
-- !private "+="
-- !private "TLMHubDidDisconnectDeviceNotification"
-- !private "CATransform3DConcat"
-- !private "OELanguageModelGenerator"
-- !private "!="
-- "ViewController"
-- !private "UnicodeScalarType"
-- !private "TLMMyoDidReceiveGyroscopeEventNotification"
-- !private "kTLMKeyAccelerometerEvent"
-- !private "GLKitPolyfill"
-- "NSUserDefaults"
-- !private "TLMHubDidConnectDeviceNotification"
-- !private "TLMGyroscopeEvent"
-- !private "<"
-- !private ">"
-- "OEEventsObserverDelegate"
-- "UIButton"
-- !private "BooleanLiteralType"
-- "AnyObject"
-- !private "print"
-- "CGFloat"
-- !private "-"
-- !private "++"
-- "NSTimer"
-- !private "Selector"
 - "Array"
-- !private "TLMMyoDidReceivePoseChangedNotification"
+- "CGFloat"
+- !private "OELanguageModelGenerator"
+- !private "=="
+- !private "<"
+- "String"
+- !private "NSNotificationCenter"
+- "NSNotification"
+- !private "print"
+- !private "TLMMyoDidReceiveAccelerometerEventNotification"
+- "ViewController"
+- !private "TLMOrientationEvent"
+- "TLMPose"
+- "UIButton"
+- "UITextField"
+- "UIImageView"
+- !private "Dictionary"
+- "StringLiteralType"
+- !private "-"
+- !private "!="
+- "NSTimer"
+- !private "+"
+- !private "TLMMyoDidReceiveOrientationEventNotification"
+- !private "CATransform3D"
+- !private "Selector"
+- !private "OEAcousticModel"
+- !private "CATransform3DConcat"
+- !private "TLMAccelerometerEvent"
+- "OEEventsObserverDelegate"
+- !private "CATransform3DRotate"
+- !private "CATransform3DIdentity"
+- !private "++"
+- "Int"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["PSs9AnyObject", "CATransform3DConcat"]
@@ -130,11 +133,13 @@ depends-member:
 - !private ["PSs9AnyObject", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSs9AnyObject", "TLMSettingsViewController"]
 - !private ["PSs9AnyObject", "addObserver"]
+- ["PSs9AnyObject", "armBand"]
 - ["PSs9AnyObject", "audioInputDidBecomeAvailable"]
 - ["PSs9AnyObject", "audioInputDidBecomeUnavailable"]
 - ["PSs9AnyObject", "audioRouteDidChangeToRoute"]
 - ["PSs9AnyObject", "audioSessionInterruptionDidBegin"]
 - ["PSs9AnyObject", "audioSessionInterruptionDidEnd"]
+- ["PSs9AnyObject", "backgroundImage"]
 - ["PSs9AnyObject", "connectButton"]
 - ["PSs9AnyObject", "counter"]
 - ["PSs9AnyObject", "currentPose"]
@@ -262,11 +267,13 @@ depends-member:
 - !private ["PSs11CVarArgType", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSs11CVarArgType", "TLMSettingsViewController"]
 - !private ["PSs11CVarArgType", "addObserver"]
+- ["PSs11CVarArgType", "armBand"]
 - ["PSs11CVarArgType", "audioInputDidBecomeAvailable"]
 - ["PSs11CVarArgType", "audioInputDidBecomeUnavailable"]
 - ["PSs11CVarArgType", "audioRouteDidChangeToRoute"]
 - ["PSs11CVarArgType", "audioSessionInterruptionDidBegin"]
 - ["PSs11CVarArgType", "audioSessionInterruptionDidEnd"]
+- ["PSs11CVarArgType", "backgroundImage"]
 - ["PSs11CVarArgType", "connectButton"]
 - ["PSs11CVarArgType", "counter"]
 - ["PSs11CVarArgType", "currentPose"]
@@ -406,11 +413,13 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "_Element"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs23CustomStringConvertible", "addObserver"]
+- ["PSs23CustomStringConvertible", "armBand"]
 - ["PSs23CustomStringConvertible", "audioInputDidBecomeAvailable"]
 - ["PSs23CustomStringConvertible", "audioInputDidBecomeUnavailable"]
 - ["PSs23CustomStringConvertible", "audioRouteDidChangeToRoute"]
 - ["PSs23CustomStringConvertible", "audioSessionInterruptionDidBegin"]
 - ["PSs23CustomStringConvertible", "audioSessionInterruptionDidEnd"]
+- ["PSs23CustomStringConvertible", "backgroundImage"]
 - ["PSs23CustomStringConvertible", "connectButton"]
 - ["PSs23CustomStringConvertible", "counter"]
 - ["PSs23CustomStringConvertible", "currentPose"]
@@ -547,11 +556,13 @@ depends-member:
 - !private ["PSs9Equatable", "_DisabledRangeIndex"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - !private ["PSs9Equatable", "addObserver"]
+- ["PSs9Equatable", "armBand"]
 - ["PSs9Equatable", "audioInputDidBecomeAvailable"]
 - ["PSs9Equatable", "audioInputDidBecomeUnavailable"]
 - ["PSs9Equatable", "audioRouteDidChangeToRoute"]
 - ["PSs9Equatable", "audioSessionInterruptionDidBegin"]
 - ["PSs9Equatable", "audioSessionInterruptionDidEnd"]
+- ["PSs9Equatable", "backgroundImage"]
 - ["PSs9Equatable", "connectButton"]
 - ["PSs9Equatable", "counter"]
 - ["PSs9Equatable", "currentPose"]
@@ -682,11 +693,13 @@ depends-member:
 - !private ["PSs8Hashable", "TLMSettingsViewController"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - !private ["PSs8Hashable", "addObserver"]
+- ["PSs8Hashable", "armBand"]
 - ["PSs8Hashable", "audioInputDidBecomeAvailable"]
 - ["PSs8Hashable", "audioInputDidBecomeUnavailable"]
 - ["PSs8Hashable", "audioRouteDidChangeToRoute"]
 - ["PSs8Hashable", "audioSessionInterruptionDidBegin"]
 - ["PSs8Hashable", "audioSessionInterruptionDidEnd"]
+- ["PSs8Hashable", "backgroundImage"]
 - ["PSs8Hashable", "connectButton"]
 - ["PSs8Hashable", "counter"]
 - ["PSs8Hashable", "currentPose"]
@@ -819,11 +832,13 @@ depends-member:
 - !private ["PSo8NSCoding", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo8NSCoding", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo8NSCoding", "TLMSettingsViewController"]
+- ["PSo8NSCoding", "armBand"]
 - ["PSo8NSCoding", "audioInputDidBecomeAvailable"]
 - ["PSo8NSCoding", "audioInputDidBecomeUnavailable"]
 - ["PSo8NSCoding", "audioRouteDidChangeToRoute"]
 - ["PSo8NSCoding", "audioSessionInterruptionDidBegin"]
 - ["PSo8NSCoding", "audioSessionInterruptionDidEnd"]
+- ["PSo8NSCoding", "backgroundImage"]
 - ["PSo8NSCoding", "connectButton"]
 - ["PSo8NSCoding", "counter"]
 - ["PSo8NSCoding", "currentPose"]
@@ -918,11 +933,13 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "TLMSettingsViewController"]
+- ["PSo26NSExtensionRequestHandling", "armBand"]
 - ["PSo26NSExtensionRequestHandling", "audioInputDidBecomeAvailable"]
 - ["PSo26NSExtensionRequestHandling", "audioInputDidBecomeUnavailable"]
 - ["PSo26NSExtensionRequestHandling", "audioRouteDidChangeToRoute"]
 - ["PSo26NSExtensionRequestHandling", "audioSessionInterruptionDidBegin"]
 - ["PSo26NSExtensionRequestHandling", "audioSessionInterruptionDidEnd"]
+- ["PSo26NSExtensionRequestHandling", "backgroundImage"]
 - ["PSo26NSExtensionRequestHandling", "connectButton"]
 - ["PSo26NSExtensionRequestHandling", "counter"]
 - ["PSo26NSExtensionRequestHandling", "currentPose"]
@@ -1028,14 +1045,17 @@ depends-member:
 - ["CSo8NSObject", "TLMPose"]
 - !private ["CSo8NSObject", "TLMSettingsViewController"]
 - ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "UIImageView"]
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UITextField"]
 - !private ["CSo8NSObject", "addObserver"]
+- ["CSo8NSObject", "armBand"]
 - ["CSo8NSObject", "audioInputDidBecomeAvailable"]
 - ["CSo8NSObject", "audioInputDidBecomeUnavailable"]
 - ["CSo8NSObject", "audioRouteDidChangeToRoute"]
 - ["CSo8NSObject", "audioSessionInterruptionDidBegin"]
 - ["CSo8NSObject", "audioSessionInterruptionDidEnd"]
+- ["CSo8NSObject", "backgroundImage"]
 - ["CSo8NSObject", "connectButton"]
 - ["CSo8NSObject", "counter"]
 - ["CSo8NSObject", "currentPose"]
@@ -1153,11 +1173,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo16NSObjectProtocol", "TLMSettingsViewController"]
 - !private ["PSo16NSObjectProtocol", "addObserver"]
+- ["PSo16NSObjectProtocol", "armBand"]
 - ["PSo16NSObjectProtocol", "audioInputDidBecomeAvailable"]
 - ["PSo16NSObjectProtocol", "audioInputDidBecomeUnavailable"]
 - ["PSo16NSObjectProtocol", "audioRouteDidChangeToRoute"]
 - ["PSo16NSObjectProtocol", "audioSessionInterruptionDidBegin"]
 - ["PSo16NSObjectProtocol", "audioSessionInterruptionDidEnd"]
+- ["PSo16NSObjectProtocol", "backgroundImage"]
 - ["PSo16NSObjectProtocol", "connectButton"]
 - ["PSo16NSObjectProtocol", "counter"]
 - ["PSo16NSObjectProtocol", "currentPose"]
@@ -1287,11 +1309,13 @@ depends-member:
 - !private ["PSo24OEEventsObserverDelegate", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo24OEEventsObserverDelegate", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo24OEEventsObserverDelegate", "TLMSettingsViewController"]
+- !private ["PSo24OEEventsObserverDelegate", "armBand"]
 - ["PSo24OEEventsObserverDelegate", "audioInputDidBecomeAvailable"]
 - ["PSo24OEEventsObserverDelegate", "audioInputDidBecomeUnavailable"]
 - ["PSo24OEEventsObserverDelegate", "audioRouteDidChangeToRoute"]
 - ["PSo24OEEventsObserverDelegate", "audioSessionInterruptionDidBegin"]
 - ["PSo24OEEventsObserverDelegate", "audioSessionInterruptionDidEnd"]
+- !private ["PSo24OEEventsObserverDelegate", "backgroundImage"]
 - !private ["PSo24OEEventsObserverDelegate", "connectButton"]
 - !private ["PSo24OEEventsObserverDelegate", "counter"]
 - !private ["PSo24OEEventsObserverDelegate", "currentPosition"]
@@ -1413,11 +1437,13 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo21UIAppearanceContainer", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo21UIAppearanceContainer", "TLMSettingsViewController"]
+- ["PSo21UIAppearanceContainer", "armBand"]
 - ["PSo21UIAppearanceContainer", "audioInputDidBecomeAvailable"]
 - ["PSo21UIAppearanceContainer", "audioInputDidBecomeUnavailable"]
 - ["PSo21UIAppearanceContainer", "audioRouteDidChangeToRoute"]
 - ["PSo21UIAppearanceContainer", "audioSessionInterruptionDidBegin"]
 - ["PSo21UIAppearanceContainer", "audioSessionInterruptionDidEnd"]
+- ["PSo21UIAppearanceContainer", "backgroundImage"]
 - ["PSo21UIAppearanceContainer", "connectButton"]
 - ["PSo21UIAppearanceContainer", "counter"]
 - ["PSo21UIAppearanceContainer", "currentPose"]
@@ -1510,11 +1536,13 @@ depends-member:
 - !private ["PSo18UIContentContainer", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo18UIContentContainer", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo18UIContentContainer", "TLMSettingsViewController"]
+- ["PSo18UIContentContainer", "armBand"]
 - ["PSo18UIContentContainer", "audioInputDidBecomeAvailable"]
 - ["PSo18UIContentContainer", "audioInputDidBecomeUnavailable"]
 - ["PSo18UIContentContainer", "audioRouteDidChangeToRoute"]
 - ["PSo18UIContentContainer", "audioSessionInterruptionDidBegin"]
 - ["PSo18UIContentContainer", "audioSessionInterruptionDidEnd"]
+- ["PSo18UIContentContainer", "backgroundImage"]
 - ["PSo18UIContentContainer", "connectButton"]
 - ["PSo18UIContentContainer", "counter"]
 - ["PSo18UIContentContainer", "currentPose"]
@@ -1610,11 +1638,13 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo18UIFocusEnvironment", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo18UIFocusEnvironment", "TLMSettingsViewController"]
+- ["PSo18UIFocusEnvironment", "armBand"]
 - ["PSo18UIFocusEnvironment", "audioInputDidBecomeAvailable"]
 - ["PSo18UIFocusEnvironment", "audioInputDidBecomeUnavailable"]
 - ["PSo18UIFocusEnvironment", "audioRouteDidChangeToRoute"]
 - ["PSo18UIFocusEnvironment", "audioSessionInterruptionDidBegin"]
 - ["PSo18UIFocusEnvironment", "audioSessionInterruptionDidEnd"]
+- ["PSo18UIFocusEnvironment", "backgroundImage"]
 - ["PSo18UIFocusEnvironment", "connectButton"]
 - ["PSo18UIFocusEnvironment", "counter"]
 - ["PSo18UIFocusEnvironment", "currentPose"]
@@ -1685,6 +1715,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "words"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo11UIImageView", "hidden"]
 - !private ["PSo10UIKeyInput", "hidden"]
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["CSo7UILabel", "hidden"]
@@ -1723,13 +1754,16 @@ depends-member:
 - ["CSo11UIResponder", "TLMPose"]
 - !private ["CSo11UIResponder", "TLMSettingsViewController"]
 - ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "UIImageView"]
 - ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "armBand"]
 - ["CSo11UIResponder", "audioInputDidBecomeAvailable"]
 - ["CSo11UIResponder", "audioInputDidBecomeUnavailable"]
 - ["CSo11UIResponder", "audioRouteDidChangeToRoute"]
 - ["CSo11UIResponder", "audioSessionInterruptionDidBegin"]
 - ["CSo11UIResponder", "audioSessionInterruptionDidEnd"]
+- ["CSo11UIResponder", "backgroundImage"]
 - ["CSo11UIResponder", "connectButton"]
 - ["CSo11UIResponder", "counter"]
 - ["CSo11UIResponder", "currentPose"]
@@ -1820,11 +1854,13 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo16UIStateRestoring", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo16UIStateRestoring", "TLMSettingsViewController"]
+- ["PSo16UIStateRestoring", "armBand"]
 - ["PSo16UIStateRestoring", "audioInputDidBecomeAvailable"]
 - ["PSo16UIStateRestoring", "audioInputDidBecomeUnavailable"]
 - ["PSo16UIStateRestoring", "audioRouteDidChangeToRoute"]
 - ["PSo16UIStateRestoring", "audioSessionInterruptionDidBegin"]
 - ["PSo16UIStateRestoring", "audioSessionInterruptionDidEnd"]
+- ["PSo16UIStateRestoring", "backgroundImage"]
 - ["PSo16UIStateRestoring", "connectButton"]
 - ["PSo16UIStateRestoring", "counter"]
 - ["PSo16UIStateRestoring", "currentPose"]
@@ -1920,11 +1956,13 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "TLMMyoDidReceiveOrientationEventNotification"]
 - !private ["PSo18UITraitEnvironment", "TLMMyoDidReceivePoseChangedNotification"]
 - !private ["PSo18UITraitEnvironment", "TLMSettingsViewController"]
+- ["PSo18UITraitEnvironment", "armBand"]
 - ["PSo18UITraitEnvironment", "audioInputDidBecomeAvailable"]
 - ["PSo18UITraitEnvironment", "audioInputDidBecomeUnavailable"]
 - ["PSo18UITraitEnvironment", "audioRouteDidChangeToRoute"]
 - ["PSo18UITraitEnvironment", "audioSessionInterruptionDidBegin"]
 - ["PSo18UITraitEnvironment", "audioSessionInterruptionDidEnd"]
+- ["PSo18UITraitEnvironment", "backgroundImage"]
 - ["PSo18UITraitEnvironment", "connectButton"]
 - ["PSo18UITraitEnvironment", "counter"]
 - ["PSo18UITraitEnvironment", "currentPose"]
@@ -2031,13 +2069,16 @@ depends-member:
 - ["CSo16UIViewController", "TLMPose"]
 - !private ["CSo16UIViewController", "TLMSettingsViewController"]
 - ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "UIImageView"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "armBand"]
 - ["CSo16UIViewController", "audioInputDidBecomeAvailable"]
 - ["CSo16UIViewController", "audioInputDidBecomeUnavailable"]
 - ["CSo16UIViewController", "audioRouteDidChangeToRoute"]
 - ["CSo16UIViewController", "audioSessionInterruptionDidBegin"]
 - ["CSo16UIViewController", "audioSessionInterruptionDidEnd"]
+- ["CSo16UIViewController", "backgroundImage"]
 - ["CSo16UIViewController", "connectButton"]
 - ["CSo16UIViewController", "counter"]
 - ["CSo16UIViewController", "currentPose"]
@@ -2141,13 +2182,16 @@ depends-member:
 - ["C13HelloMyoSwift14ViewController", "TLMPose"]
 - !private ["C13HelloMyoSwift14ViewController", "TLMSettingsViewController"]
 - ["C13HelloMyoSwift14ViewController", "UIButton"]
+- ["C13HelloMyoSwift14ViewController", "UIImageView"]
 - ["C13HelloMyoSwift14ViewController", "UILabel"]
 - ["C13HelloMyoSwift14ViewController", "UITextField"]
+- ["C13HelloMyoSwift14ViewController", "armBand"]
 - ["C13HelloMyoSwift14ViewController", "audioInputDidBecomeAvailable"]
 - ["C13HelloMyoSwift14ViewController", "audioInputDidBecomeUnavailable"]
 - ["C13HelloMyoSwift14ViewController", "audioRouteDidChangeToRoute"]
 - ["C13HelloMyoSwift14ViewController", "audioSessionInterruptionDidBegin"]
 - ["C13HelloMyoSwift14ViewController", "audioSessionInterruptionDidEnd"]
+- ["C13HelloMyoSwift14ViewController", "backgroundImage"]
 - ["C13HelloMyoSwift14ViewController", "connectButton"]
 - ["C13HelloMyoSwift14ViewController", "counter"]
 - ["C13HelloMyoSwift14ViewController", "currentPose"]
@@ -2325,6 +2369,7 @@ depends-nominal:
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
+- !private "CSo11UIImageView"
 - !private "PSo10UIKeyInput"
 - !private "CSo7UILabel"
 - "CSo11UIResponder"
@@ -2399,4 +2444,4 @@ depends-external:
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/sphinx_config.h"
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/OENotification.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "e66c6f3fbb33fa90bd461a7b3e5625e9"
+interface-hash: "4a226d0c3ecb0d4a042a7dc9a90d421b"

@@ -2,13 +2,16 @@ import UIKit
 
 class ViewController: UIViewController, OEEventsObserverDelegate{
 
+    @IBOutlet weak var armBand: UIImageView!
     @IBOutlet weak var highscoreLabel: UILabel!
-    @IBOutlet weak var num: UITextField!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     @IBOutlet weak var pushText: UITextField!
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var reset: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var num: UILabel!
     var pushUpsDone = 0 // pushup counters
     var currentPose: TLMPose!
     var pushUpState = 0 // finite state machine (0=top of pushup, 1=bottom of pushup)
@@ -35,6 +38,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         let notifier = NSNotificationCenter.defaultCenter()
         loadOpenEars()
         pushText.hidden = true
@@ -44,6 +48,9 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         startButton.hidden = true
         stopButton.hidden = true
         highscoreLabel.hidden = true
+        armBand.hidden = true
+        
+        
         
 //        startListening()
         // Data notifications are received through NSNotificationCenter.
@@ -91,10 +98,12 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     //band is connected
     func didConnectDevice(notification: NSNotification) {
         self.connectButton.hidden = true
-        pushText.hidden = false
         pushText.text = "Say 'Start' to start"
+        pushText.hidden = false
         startButton.hidden = false
         highscoreLabel.hidden = false
+        backgroundImage.hidden = true
+        armBand.hidden = false
         startListening()
         
         
@@ -117,9 +126,10 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         //stopButton.hidden = false
         startButton.hidden = true
         pushText.text = ""
-        //pushText.text = "Say 'Stop' to stop"
+        //pushText.text = "Say 'Stop' to Stop"
         num.text = ""
         num.hidden = false
+        stopButton.hidden = false
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     
@@ -130,7 +140,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         counter = 0
         startButton.hidden = false
         reset.hidden = true
-        pushText.text = "Say 'Start' to start"
+        pushText.text = "Say 'Start' to Start"
     }
     
 
@@ -332,7 +342,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
             counter++
             timer.invalidate()
             stopButton.hidden = false
-            pushText.text = "Say 'Stop' to stop"
+            pushText.text = "Say 'Stop' to Stop"
         }
     }
     

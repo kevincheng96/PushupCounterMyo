@@ -44,7 +44,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6KtdVljRfCTcGjqjLb89us9om8M=
+			mgo3k8df+rgcQ9KWdmBx6sbGX+g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jTI1PPgC7uXy07s7ubV2eb0GFng=
+			dEbliSuNZDczAi8+TFW0MbtmHI0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HEJh3WOC7RZTz7sAy4kE9ZvdXrg=
+			JLpyhP4fXEd3wqSR7OaGKexofuo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -140,6 +140,14 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>armband.jpg</key>
+		<data>
+		yMsM5vqotzeCqVx8qhIb0daIDuE=
+		</data>
+		<key>background.png</key>
+		<data>
+		eXfsW3Eq8hiiojF+EwVVpnFYJKk=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		S7sWoVkiOGgqYmKvdfB5VKrfQs4=
@@ -187,7 +195,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6KtdVljRfCTcGjqjLb89us9om8M=
+			mgo3k8df+rgcQ9KWdmBx6sbGX+g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -196,7 +204,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jTI1PPgC7uXy07s7ubV2eb0GFng=
+			dEbliSuNZDczAi8+TFW0MbtmHI0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -214,7 +222,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HEJh3WOC7RZTz7sAy4kE9ZvdXrg=
+			JLpyhP4fXEd3wqSR7OaGKexofuo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -274,6 +282,14 @@
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
 		glwbVa63pv6EE4bTLP2Zxu3k8M0=
+		</data>
+		<key>armband.jpg</key>
+		<data>
+		yMsM5vqotzeCqVx8qhIb0daIDuE=
+		</data>
+		<key>background.png</key>
+		<data>
+		eXfsW3Eq8hiiojF+EwVVpnFYJKk=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>

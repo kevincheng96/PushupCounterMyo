@@ -19,6 +19,8 @@
 		52EDBFCD1C7966A900A7A20F /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFC51C795D0D00A7A20F /* OpenEars.framework */; };
 		52EDBFCE1C7966B100A7A20F /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFC61C795D0D00A7A20F /* Slt.framework */; };
 		52EDBFD31C79693E00A7A20F /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52EDBFD21C79693E00A7A20F /* AcousticModelEnglish.bundle */; };
+		52EDBFDA1C79F27500A7A20F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EDBFD91C79F27500A7A20F /* background.png */; };
+		52EDBFDC1C79FD5A00A7A20F /* armband.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52EDBFDB1C79FD5A00A7A20F /* armband.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		52EDBFC71C795D5A00A7A20F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		52EDBFC91C795D6100A7A20F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		52EDBFD21C79693E00A7A20F /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelEnglish.bundle; path = Framework/AcousticModelEnglish.bundle; sourceTree = SOURCE_ROOT; };
+		52EDBFD91C79F27500A7A20F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		52EDBFDB1C79FD5A00A7A20F /* armband.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = armband.jpg; sourceTree = "<group>"; };
 		DA75DC7AF6F87C17E5EF92BB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE50A6670235612D10857420 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +84,8 @@
 		278DAE4519FCAEC500EB804B /* HelloMyoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				52EDBFDB1C79FD5A00A7A20F /* armband.jpg */,
+				52EDBFD91C79F27500A7A20F /* background.png */,
 				270BA99E19FD18CB0066528B /* GLKitPolyfill.h */,
 				270BA99F19FD18CB0066528B /* GLKitPolyfill.m */,
 				278DAE4819FCAEC500EB804B /* AppDelegate.swift */,
@@ -186,6 +192,8 @@
 			files = (
 				278DAE5119FCAEC500EB804B /* Main.storyboard in Resources */,
 				52EDBFD31C79693E00A7A20F /* AcousticModelEnglish.bundle in Resources */,
+				52EDBFDA1C79F27500A7A20F /* background.png in Resources */,
+				52EDBFDC1C79FD5A00A7A20F /* armband.jpg in Resources */,
 				278DAE5619FCAEC500EB804B /* LaunchScreen.xib in Resources */,
 				278DAE5319FCAEC500EB804B /* Images.xcassets in Resources */,
 			);
