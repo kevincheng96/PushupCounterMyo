@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/john/Desktop/PushupCounterMyo/HelloMyoSwift/GLKitPolyfill.m \
+  /Users/john/Desktop/PushupCounterMyo/HelloMyoSwift/GLKitPolyfill.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/MyoKit.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMHub.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMMyo.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMOrientationEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMMath.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMEulerAngles.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMAngle.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMAccelerometerEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMPose.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMArmSyncEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMSettingsViewController.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMGyroscopeEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMArmUnsyncEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMUnlockEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMLockEvent.h \
+  /Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMEmgEvent.h

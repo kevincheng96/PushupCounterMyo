@@ -111,7 +111,9 @@ SWIFT_CLASS("_TtC13HelloMyoSwift11AppDelegate")
 
 @class UITextField;
 @class TLMPose;
+@class OEEventsObserver;
 @class NSNotification;
+@class NSString;
 @class UIProgressView;
 @class UILabel;
 @class UIButton;
@@ -136,6 +138,11 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 @property (nonatomic, strong) TLMPose * __null_unspecified currentPose;
 @property (nonatomic) NSInteger pushUpState;
 @property (nonatomic) NSInteger quaternionCounter;
+@property (nonatomic, strong) OEEventsObserver * __nonnull openEarsEventsObserver;
+@property (nonatomic, copy) NSString * __null_unspecified lmPath;
+@property (nonatomic, copy) NSString * __null_unspecified dicPath;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull words;
+@property (nonatomic, copy) NSString * __null_unspecified currentWord;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)didTapSettings:(id __nonnull)sender;
@@ -146,6 +153,11 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 - (void)didRecieveAccelerationEvent:(NSNotification * __nonnull)notification;
 - (void)didChangePose:(NSNotification * __nonnull)notification;
 - (void)didRecieveGyroScopeEvent:(NSNotification * __nonnull)notification;
+- (void)loadOpenEars;
+- (void)pocketsphinxDidReceiveHypothesis:(NSString * __nonnull)recognitionScore utteranceID:(NSString * __nonnull)utteranceID;
+- (void)getNewWord;
+- (void)pocketsphinxDidStartListening;
+- (void)startListening;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

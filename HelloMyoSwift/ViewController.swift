@@ -23,12 +23,24 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     var startPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)? // Euler angles
     var currentPosition: (pitch: CGFloat, yaw: CGFloat, roll: CGFloat)? // Euler angles
     var quaternionCounter = 0 // counter to limit the amount of times that app receives orientation events
+    var openEarsEventsObserver = OEEventsObserver() //start listening to audios 
+    
+    var lmPath: String! //path to the English packet
+    var dicPath: String! //path to dictionary
+    var words: Array<String> = ["START", "STOP"]
+    var currentWord: String!
+    
+    var start = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let notifier = NSNotificationCenter.defaultCenter()
+        loadOpenEars()
         pushText.hidden = true
         stateText.text = "up"
+        
+        startListening()
         // Data notifications are received through NSNotificationCenter.
         notifier.addObserver(self, selector: "didConnectDevice:", name: TLMHubDidConnectDeviceNotification, object: nil)
         notifier.addObserver(self, selector: "didDisconnectDevice:", name: TLMHubDidDisconnectDeviceNotification, object: nil)
@@ -40,6 +52,20 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         // Posted when one of the pre-configued geatures is recognized (e.g. Fist, Wave In, Wave Out, etc)
         notifier.addObserver(self, selector: "didChangePose:", name: TLMMyoDidReceivePoseChangedNotification, object: nil)
         notifier.addObserver(self, selector: "didRecieveGyroScopeEvent:", name: TLMMyoDidReceiveGyroscopeEventNotification, object: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        pocketsphinxDidDetectSpeech() //detect if the user starts talking
+//        if(start == 0){
+//            pocketsphinxDidReceiveHypothesis("START", recognitionScore: "800", utteranceID: "")
+//        }
+        
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+//        stopListening()
     }
     
     override func didReceiveMemoryWarning() {
@@ -139,7 +165,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         //    let z = acceleration.z
         //    accelerationLabel.text = "Acceleration (\(x), \(y), \(z))"
     }
-    
+   
     func didChangePose(notification: NSNotification) {
         let eventData = notification.userInfo as! Dictionary<NSString, TLMPose>
         currentPose = eventData[kTLMKeyPose]!
@@ -183,5 +209,52 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         //    let z = gyroData.z
         //    gyroscopeLabel.text = "Gyro: (\(x), \(y), \(z))"
     }
+    
+    func loadOpenEars() {
+        
+        self.openEarsEventsObserver = OEEventsObserver()
+        self.openEarsEventsObserver.delegate = self
+        
+        var lmGenerator: OELanguageModelGenerator = OELanguageModelGenerator()
+        
+        //addWords()
+        var name = "LanguageModelFileStarSaver"
+        lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
+        
+        lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
+        dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
+    }
+    
+    func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
+        if hypothesis == "START" { // start recognized
+            //do what you want here when the correct word is recognized
+            start = 1
+        }
+        print("our hypothesis is: " + hypothesis)
+        print("start is" + String(start))
+    }
+//    
+//    func getNewWord() { // get the current word
+//        var randomWord = Int(arc4random_uniform(UInt32(words.count)))
+//        currentWord = words[randomWord]
+//    }
+
+    func pocketsphinxDidStartListening() {
+        print("Pocketsphinx is now listening.")
+    }
+    
+    func startListening() {
+        do {
+            try OEPocketsphinxController.sharedInstance().setActive(true)
+            OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+        } catch {
+            print("doesn't start listening")
+        }
+    }
+    
+    func pocketsphinxDidDetectSpeech() {
+        print("Pocketsphinx has detected speech.")
+    }
+    
 }
 

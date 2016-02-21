@@ -14,14 +14,11 @@
 		278DAE5119FCAEC500EB804B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE4F19FCAEC500EB804B /* Main.storyboard */; };
 		278DAE5319FCAEC500EB804B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE5219FCAEC500EB804B /* Images.xcassets */; };
 		278DAE5619FCAEC500EB804B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278DAE5419FCAEC500EB804B /* LaunchScreen.xib */; };
-		52EDBF861C78C7B200A7A20F /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBF851C78C7B200A7A20F /* MyoKit.framework */; };
-		52EDBFB11C7938B300A7A20F /* AcousticModelEnglish.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFAD1C7938B300A7A20F /* AcousticModelEnglish.bundle */; };
-		52EDBFB21C7938B300A7A20F /* AcousticModelSpanish.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFAE1C7938B300A7A20F /* AcousticModelSpanish.bundle */; };
-		52EDBFB31C7938B300A7A20F /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFAF1C7938B300A7A20F /* OpenEars.framework */; };
-		52EDBFB41C7938B300A7A20F /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFB01C7938B300A7A20F /* Slt.framework */; };
-		52EDBFB61C79448500A7A20F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFB51C79448500A7A20F /* AudioToolbox.framework */; };
-		52EDBFB81C79449600A7A20F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFB71C79449600A7A20F /* AVFoundation.framework */; };
-		BEF4A774F5A7A6AB22605B28 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 869B6ED8684B18C6BE583A7E /* libPods.a */; };
+		52EDBFC81C795D5A00A7A20F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFC71C795D5A00A7A20F /* AudioToolbox.framework */; };
+		52EDBFCA1C795D6100A7A20F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFC91C795D6100A7A20F /* AVFoundation.framework */; };
+		52EDBFCD1C7966A900A7A20F /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFC51C795D0D00A7A20F /* OpenEars.framework */; };
+		52EDBFCE1C7966B100A7A20F /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFC61C795D0D00A7A20F /* Slt.framework */; };
+		52EDBFD31C79693E00A7A20F /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52EDBFD21C79693E00A7A20F /* AcousticModelEnglish.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,14 +33,11 @@
 		278DAE5219FCAEC500EB804B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		278DAE5519FCAEC500EB804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		278DAE6C19FCB99900EB804B /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
-		52EDBF851C78C7B200A7A20F /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = Pods/MyoSDK/MyoKit.framework; sourceTree = "<group>"; };
-		52EDBFAD1C7938B300A7A20F /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelEnglish.bundle; path = "../../Downloads/OpenEarsDistribution (1)/Framework/AcousticModelEnglish.bundle"; sourceTree = "<group>"; };
-		52EDBFAE1C7938B300A7A20F /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelSpanish.bundle; path = "../../Downloads/OpenEarsDistribution (1)/Framework/AcousticModelSpanish.bundle"; sourceTree = "<group>"; };
-		52EDBFAF1C7938B300A7A20F /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = "../../Downloads/OpenEarsDistribution (1)/Framework/OpenEars.framework"; sourceTree = "<group>"; };
-		52EDBFB01C7938B300A7A20F /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = "../../Downloads/OpenEarsDistribution (1)/Framework/Slt.framework"; sourceTree = "<group>"; };
-		52EDBFB51C79448500A7A20F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		52EDBFB71C79449600A7A20F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		869B6ED8684B18C6BE583A7E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EDBFC51C795D0D00A7A20F /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		52EDBFC61C795D0D00A7A20F /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		52EDBFC71C795D5A00A7A20F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		52EDBFC91C795D6100A7A20F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		52EDBFD21C79693E00A7A20F /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelEnglish.bundle; path = Framework/AcousticModelEnglish.bundle; sourceTree = SOURCE_ROOT; };
 		DA75DC7AF6F87C17E5EF92BB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE50A6670235612D10857420 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,14 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EDBFB81C79449600A7A20F /* AVFoundation.framework in Frameworks */,
-				52EDBFB61C79448500A7A20F /* AudioToolbox.framework in Frameworks */,
-				52EDBFB11C7938B300A7A20F /* AcousticModelEnglish.bundle in Frameworks */,
-				52EDBFB21C7938B300A7A20F /* AcousticModelSpanish.bundle in Frameworks */,
-				52EDBFB31C7938B300A7A20F /* OpenEars.framework in Frameworks */,
-				52EDBFB41C7938B300A7A20F /* Slt.framework in Frameworks */,
-				52EDBF861C78C7B200A7A20F /* MyoKit.framework in Frameworks */,
-				BEF4A774F5A7A6AB22605B28 /* libPods.a in Frameworks */,
+				52EDBFCE1C7966B100A7A20F /* Slt.framework in Frameworks */,
+				52EDBFCA1C795D6100A7A20F /* AVFoundation.framework in Frameworks */,
+				52EDBFC81C795D5A00A7A20F /* AudioToolbox.framework in Frameworks */,
+				52EDBFCD1C7966A900A7A20F /* OpenEars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +60,12 @@
 		278DAE3A19FCAEC500EB804B = {
 			isa = PBXGroup;
 			children = (
+				52EDBFC21C795D0D00A7A20F /* Framework */,
 				270BA99619FD04970066528B /* README.md */,
 				278DAE6C19FCB99900EB804B /* bridge.h */,
 				278DAE4519FCAEC500EB804B /* HelloMyoSwift */,
 				278DAE4419FCAEC500EB804B /* Products */,
 				3AD22711A769A134A2BF2C49 /* Pods */,
-				8AFF1003E13A87D48903FBD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,19 +109,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8AFF1003E13A87D48903FBD2 /* Frameworks */ = {
+		52EDBFC21C795D0D00A7A20F /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				52EDBFB71C79449600A7A20F /* AVFoundation.framework */,
-				52EDBFB51C79448500A7A20F /* AudioToolbox.framework */,
-				52EDBFAD1C7938B300A7A20F /* AcousticModelEnglish.bundle */,
-				52EDBFAE1C7938B300A7A20F /* AcousticModelSpanish.bundle */,
-				52EDBFAF1C7938B300A7A20F /* OpenEars.framework */,
-				52EDBFB01C7938B300A7A20F /* Slt.framework */,
-				52EDBF851C78C7B200A7A20F /* MyoKit.framework */,
-				869B6ED8684B18C6BE583A7E /* libPods.a */,
+				52EDBFD21C79693E00A7A20F /* AcousticModelEnglish.bundle */,
+				52EDBFC91C795D6100A7A20F /* AVFoundation.framework */,
+				52EDBFC71C795D5A00A7A20F /* AudioToolbox.framework */,
+				52EDBFC51C795D0D00A7A20F /* OpenEars.framework */,
+				52EDBFC61C795D0D00A7A20F /* Slt.framework */,
 			);
-			name = Frameworks;
+			name = Framework;
+			path = "../../Downloads/OpenEarsDistribution (1)/Framework";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				278DAE5119FCAEC500EB804B /* Main.storyboard in Resources */,
+				52EDBFD31C79693E00A7A20F /* AcousticModelEnglish.bundle in Resources */,
 				278DAE5619FCAEC500EB804B /* LaunchScreen.xib in Resources */,
 				278DAE5319FCAEC500EB804B /* Images.xcassets in Resources */,
 			);
@@ -363,6 +352,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/MyoSDK",
 					"$(PROJECT_DIR)/Pods/OpenEarsDistribution/**",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = HelloMyoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -396,6 +386,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/MyoSDK",
 					"$(PROJECT_DIR)/Pods/OpenEarsDistribution/**",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = HelloMyoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
