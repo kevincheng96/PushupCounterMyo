@@ -10,6 +10,8 @@
 		20F71D71C9DAD8BBAAD1EADC /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026D66ED2DA178A8432C9C7F /* CoreBluetooth.framework */; };
 		25B379FD333E5E3EF2884AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE12761EB4F1F062DA426B4 /* Foundation.framework */; };
 		3852C9FC843868CCBB65C571 /* Pods-MyoSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CBCE396C88D8B15A1EC8CE /* Pods-MyoSDK-dummy.m */; };
+		52EDBFD51C799B0300A7A20F /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFD41C799B0300A7A20F /* MyoKit.framework */; };
+		52EDBFD61C799B0300A7A20F /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EDBFD41C799B0300A7A20F /* MyoKit.framework */; };
 		782BAD807CC9A05A7AD9B4BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE12761EB4F1F062DA426B4 /* Foundation.framework */; };
 		91CBB5DAA3D5CD39CE7C2779 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A21AC9D429E8BD47B2DDD3BB /* Pods-dummy.m */; };
 		9D27B92AFCAD6DB4DAC22CC8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF65841E2A683DF4CBC98F0 /* SystemConfiguration.framework */; };
@@ -33,6 +35,7 @@
 		28C72D0C679059B959E31A70 /* Pods-MyoSDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyoSDK-Private.xcconfig"; sourceTree = "<group>"; };
 		42B60CA131DE7D559BDD034D /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MyoKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EF0D6C64E983A830F60A334 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		52EDBFD41C799B0300A7A20F /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = ../../../HelloMyoSwift/Pods/MyoSDK/Framework/MyoKit.framework; sourceTree = "<group>"; };
 		59CE62348D9DA9E54000885A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7E090667DAAEF24BA686B945 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
 		989530AC369129E09FC2876F /* libPods-MyoSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyoSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F71D71C9DAD8BBAAD1EADC /* CoreBluetooth.framework in Frameworks */,
+				52EDBFD61C799B0300A7A20F /* MyoKit.framework in Frameworks */,
 				782BAD807CC9A05A7AD9B4BE /* Foundation.framework in Frameworks */,
 				FDF79A54F7B0BB7098304ACE /* MyoKit.framework in Frameworks */,
 				9D27B92AFCAD6DB4DAC22CC8 /* SystemConfiguration.framework in Frameworks */,
@@ -64,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B379FD333E5E3EF2884AA6 /* Foundation.framework in Frameworks */,
+				52EDBFD51C799B0300A7A20F /* MyoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +102,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		4DC8F49FB9A4FFCDC935D5E4 /* Frameworks */ = {
+		4DC8F49FB9A4FFCDC935D5E4 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				52EDBFD41C799B0300A7A20F /* MyoKit.framework */,
 			);
-			name = Frameworks;
+			name = Framework;
 			sourceTree = "<group>";
 		};
 		72FEBF03962407641E4089B2 /* Pods */ = {
@@ -142,7 +148,7 @@
 		D221A6AF2C82F9EC37F22BAA /* MyoSDK */ = {
 			isa = PBXGroup;
 			children = (
-				4DC8F49FB9A4FFCDC935D5E4 /* Frameworks */,
+				4DC8F49FB9A4FFCDC935D5E4 /* Framework */,
 				C5F45DBB624D24F10F16CDAB /* Support Files */,
 			);
 			path = MyoSDK;
@@ -328,6 +334,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyoSDK",
+					/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -358,6 +365,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyoSDK",
+					/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";

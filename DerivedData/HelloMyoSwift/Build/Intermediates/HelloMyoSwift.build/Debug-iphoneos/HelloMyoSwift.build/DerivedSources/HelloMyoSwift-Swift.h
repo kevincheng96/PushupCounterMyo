@@ -112,6 +112,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift11AppDelegate")
 @class UITextField;
 @class TLMPose;
 @class OEEventsObserver;
+@class NSTimer;
 @class NSNotification;
 @class UIProgressView;
 @class UILabel;
@@ -127,6 +128,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified armLabel;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified gyroscopeLabel;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified button1;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified resetButton;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified pushText;
 @property (nonatomic, strong) IBOutlet UITextField * __null_unspecified stateText;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified yawText;
@@ -138,12 +140,15 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 @property (nonatomic) NSInteger pushUpState;
 @property (nonatomic) NSInteger quaternionCounter;
 @property (nonatomic, strong) OEEventsObserver * __nonnull openEarsEventsObserver;
+@property (nonatomic, strong) NSTimer * __nonnull timer;
 @property (nonatomic, copy) NSString * __null_unspecified lmPath;
 @property (nonatomic, copy) NSString * __null_unspecified dicPath;
 @property (nonatomic, copy) NSArray<NSString *> * __nonnull words;
 @property (nonatomic, copy) NSString * __null_unspecified currentWord;
 @property (nonatomic) NSInteger stop;
 @property (nonatomic) NSInteger start;
+@property (nonatomic) NSInteger counter;
+@property (nonatomic) NSInteger sum;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
@@ -152,6 +157,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 - (IBAction)getCurrentPosition:(id __nonnull)sender;
 - (void)didConnectDevice:(NSNotification * __nonnull)notification;
 - (void)didDisconnectDevice:(NSNotification * __nonnull)notification;
+- (IBAction)resetButton:(id __nonnull)sender;
 - (void)didRecieveOrientationEvent:(NSNotification * __nonnull)notification;
 - (void)didRecieveAccelerationEvent:(NSNotification * __nonnull)notification;
 - (void)didChangePose:(NSNotification * __nonnull)notification;
@@ -161,7 +167,7 @@ SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
 - (void)pocketsphinxDidStartListening;
 - (void)startListening;
 - (void)pocketsphinxDidDetectSpeech;
-- (void)countDown;
+- (void)update;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -9,6 +9,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     @IBOutlet weak var gyroscopeLabel: UILabel!
     
     @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     
     @IBOutlet weak var pushText: UITextField!
 
@@ -29,13 +30,14 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     
     var lmPath: String! //path to the English packet
     var dicPath: String! //path to dictionary
-    var words: Array<String> = ["START PUSHUP" , "STOP PUSHUP"]
+    var words: Array<String> = ["START PUSHUP" , "STOP"]
     var currentWord: String!
     
     var stop = 0
     var start = 0
     
-    
+    var counter = 0 //countdown counter
+    var sum = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,9 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         loadOpenEars()
         pushText.hidden = true
         stateText.text = "up"
+        resetButton.hidden = true
         
+        var timer: NSTimer;// = NSTimer.timerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true) //timer Interval 1 second
         startListening()
         // Data notifications are received through NSNotificationCenter.
         notifier.addObserver(self, selector: "didConnectDevice:", name: TLMHubDidConnectDeviceNotification, object: nil)
@@ -84,12 +88,16 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     
     @IBAction func getCurrentPosition(sender: AnyObject) { //initilaize the height
         startPosition = currentPosition
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        
     }
     
     //band is connected
     func didConnectDevice(notification: NSNotification) {
         button1.hidden = true
         pushText.hidden = false
+        resetButton.hidden = false
+        
         
         //    helloLabel.center = self.view.center
         //        armLabel.text = "Perform the Sync Gesture"
@@ -104,6 +112,13 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         armLabel.text = ""
         accelerationProgressBar.hidden = true
         accelerationLabel.hidden = true
+    }
+    
+    @IBAction func resetButton(sender: AnyObject) { //reset
+        start = 0
+        stop = 0
+        num.text = "0"
+        counter = 0
     }
     
     func didRecieveOrientationEvent(notification: NSNotification) {
@@ -162,12 +177,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         
         let acceleration = GLKitPolyfill.getAcceleration(accelerometerEvent);
         accelerationProgressBar.progress = acceleration.magnitude / 4.0;
-        
-        // Uncomment to show direction of acceleration
-        //    let x = acceleration.x
-        //    let y = acceleration.y
-        //    let z = acceleration.z
-        //    accelerationLabel.text = "Acceleration (\(x), \(y), \(z))"
+   
     }
    
     func didChangePose(notification: NSNotification) {
@@ -231,17 +241,18 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
   
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
         if hypothesis == "START PUSHUP" && start == 0 { // start recognized the first time
-            //do what you want here when the correct word is recognized
-            startPosition = currentPosition
             start = 1
-           // countDown() //start countdown
             print("start is : " + String(start))
-          
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+            //schedule the timer on the view run loop
         }
-        if hypothesis == "STOP PUSHUP" {
+        
+        if hypothesis == "STOP" {
             stop = 1
             startPosition = nil
+            start = 0
             print("stop is : " + String(stop))
+            //unschedule the timer on the view run loop
         }
     }
 
@@ -266,11 +277,19 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         print("Pocketsphinx has detected speech.")
     }
     
-    func countDown() {
-        
+    
+    func update() { //update Time
+        if(counter < 3)
+        {
+            if(counter == 1) {//register initial state at the 2nd second
+                startPosition = currentPosition
+            }
+            num.text = String(sum - counter)
+            counter += 1
+        } else if (counter == 3){
+            num.text = "START"
+        }
     }
-    
-    
     
 }
 

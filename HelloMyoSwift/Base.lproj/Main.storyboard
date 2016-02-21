@@ -72,17 +72,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-Xb-G7n">
-                                <rect key="frame" x="22" y="425" width="97" height="30"/>
+                                <rect key="frame" x="0.0" y="348" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Cm-tj-vqa">
-                                <rect key="frame" x="22" y="460" width="97" height="30"/>
+                                <rect key="frame" x="0.0" y="386" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wkt-p7-eh3">
-                                <rect key="frame" x="20" y="496" width="97" height="30"/>
+                                <rect key="frame" x="0.0" y="424" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -98,6 +98,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6G-kD-gic">
+                                <rect key="frame" x="130" y="525" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSs-FI-9HI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -112,6 +119,7 @@
                         <outlet property="num" destination="Dd1-4d-oSR" id="hMU-bd-kuv"/>
                         <outlet property="pitchText" destination="wkt-p7-eh3" id="exr-YL-f99"/>
                         <outlet property="pushText" destination="ett-gy-SZh" id="vYd-gF-mvg"/>
+                        <outlet property="resetButton" destination="h6G-kD-gic" id="N8q-MZ-QCF"/>
                         <outlet property="rowText" destination="3Cm-tj-vqa" id="h1x-eY-6MT"/>
                         <outlet property="stateText" destination="B4w-Bl-Mtb" id="Jzc-Pr-p0w"/>
                         <outlet property="yawText" destination="cpA-Xb-G7n" id="QkO-FR-3VX"/>

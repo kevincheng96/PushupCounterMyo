@@ -6,103 +6,111 @@ provides-nominal:
 provides-member:
 - ["C13HelloMyoSwift14ViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "getCurrentPosition"
-- "didRecieveOrientationEvent"
-- "gyroscopeLabel"
-- "num"
-- "lmPath"
-- "button1"
-- "didTapSettings"
-- "dicPath"
-- "pocketsphinxDidDetectSpeech"
-- "startListening"
-- "viewDidDisappear"
-- "openEarsEventsObserver"
-- "pushUpState"
-- "start"
-- "armLabel"
-- "viewDidAppear"
-- "rowText"
-- "accelerationLabel"
-- "stop"
-- "countDown"
 - "didDisconnectDevice"
-- "didConnectDevice"
-- "didRecieveAccelerationEvent"
-- "helloLabel"
-- "stateText"
-- "currentWord"
-- "loadOpenEars"
+- "stop"
+- "accelerationProgressBar"
+- "dicPath"
+- "button1"
+- "resetButton"
+- "resetButton"
+- "pocketsphinxDidDetectSpeech"
 - "didRecieveGyroScopeEvent"
-- "currentPose"
+- "viewDidDisappear"
+- "loadOpenEars"
+- "pocketsphinxDidReceiveHypothesis"
+- "rowText"
+- "currentWord"
+- "didTapSettings"
+- "didRecieveAccelerationEvent"
+- "words"
 - "quaternionCounter"
 - "yawText"
-- "words"
-- "didReceiveMemoryWarning"
-- "pitchText"
-- "pushText"
+- "currentPose"
+- "helloLabel"
+- "pushUpState"
+- "armLabel"
+- "openEarsEventsObserver"
+- "stateText"
+- "viewDidLoad"
+- "viewDidAppear"
 - "pushUpsDone"
-- "pocketsphinxDidReceiveHypothesis"
-- "pocketsphinxDidStartListening"
+- "pushText"
+- "accelerationLabel"
+- "didReceiveMemoryWarning"
+- "timer"
+- "sum"
+- "pitchText"
+- "counter"
 - "didChangePose"
-- "accelerationProgressBar"
+- "didRecieveOrientationEvent"
+- "didConnectDevice"
+- "startListening"
+- "getCurrentPosition"
+- "pocketsphinxDidStartListening"
+- "start"
+- "gyroscopeLabel"
+- "update"
+- "num"
+- "lmPath"
 depends-top-level:
-- !private "TLMAccelerometerEvent"
-- "CGFloat"
-- "StringLiteralType"
-- "String"
-- !private "NSString"
-- !private "UIFont"
-- !private "TLMMyoDidReceiveAccelerometerEventNotification"
-- !private "TLMOrientationEvent"
-- !private "UIColor"
-- "UIViewController"
-- "ViewController"
-- !private "TLMGyroscopeEvent"
-- "Bool"
-- "OEEventsObserver"
 - !private "kTLMKeyAccelerometerEvent"
-- !private "OELanguageModelGenerator"
-- !private "kTLMKeyGyroscopeEvent"
-- !private "kTLMKeyOrientationEvent"
-- !private "+"
-- "AnyObject"
+- !private ">"
 - "UILabel"
-- !private "OEPocketsphinxController"
-- !private "TLMMyoDidReceiveOrientationEventNotification"
-- !private "+="
-- !private "<"
-- !private "!="
+- !private "TLMOrientationEvent"
+- !private "TLMMyoDidReceivePoseChangedNotification"
+- !private "Dictionary"
+- "OEEventsObserverDelegate"
+- "UITextField"
+- "AnyObject"
+- "NSTimer"
+- !private "TLMHubDidDisconnectDeviceNotification"
+- !private "=="
+- !private "NSString"
 - !private "-"
-- !private "CATransform3DRotate"
+- !private "+="
+- "Array"
+- "TLMPose"
+- !private "CATransform3D"
+- "UIProgressView"
 - !private "TLMMyoDidReceiveGyroscopeEventNotification"
 - !private "CATransform3DIdentity"
-- !private "NSNotificationCenter"
-- "TLMPose"
-- !private "CATransform3DConcat"
-- !private "TLMSettingsViewController"
-- !private "++"
-- !private "GLKitPolyfill"
-- !private "&&"
-- !private "kTLMKeyPose"
-- !private "print"
-- !private "TLMHubDidDisconnectDeviceNotification"
-- "UIProgressView"
-- "UIButton"
-- !private "=="
-- "Array"
-- "OEEventsObserverDelegate"
-- !private "OEAcousticModel"
+- !private "kTLMKeyGyroscopeEvent"
+- !private "+"
 - "NSNotification"
-- !private "BooleanLiteralType"
+- !private "OELanguageModelGenerator"
+- !private "TLMMyoDidReceiveOrientationEventNotification"
+- "UIViewController"
+- "OEEventsObserver"
+- !private "UnicodeScalarType"
+- !private "GLKitPolyfill"
+- !private "Selector"
+- "StringLiteralType"
+- !private "UIFont"
+- !private "CATransform3DRotate"
+- !private "TLMGyroscopeEvent"
+- !private "++"
 - !private "/"
-- !private "Dictionary"
-- !private "TLMMyoDidReceivePoseChangedNotification"
-- !private "CATransform3D"
-- "UITextField"
+- !private "<"
+- "Bool"
+- !private "CATransform3DConcat"
+- !private "kTLMKeyPose"
+- !private "&&"
+- !private "TLMSettingsViewController"
+- "CGFloat"
+- !private "TLMAccelerometerEvent"
+- "ViewController"
+- "UIButton"
+- !private "BooleanLiteralType"
+- !private "!="
+- !private "kTLMKeyOrientationEvent"
+- !private "TLMMyoDidReceiveAccelerometerEventNotification"
+- !private "OEPocketsphinxController"
+- !private "UIColor"
+- !private "OEAcousticModel"
+- "String"
+- !private "print"
 - !private "TLMHubDidConnectDeviceNotification"
-- !private ">"
+- !private "NSNotificationCenter"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["CSo16AccelerationData", "magnitude"]
@@ -113,10 +121,12 @@ depends-member:
 - !private ["PSs9AnyObject", "GLKitPolyfill"]
 - !private ["PSs9AnyObject", "NSNotificationCenter"]
 - !private ["PSs9AnyObject", "NSString"]
+- ["PSs9AnyObject", "NSTimer"]
 - !private ["PSs9AnyObject", "OEAcousticModel"]
 - ["PSs9AnyObject", "OEEventsObserver"]
 - !private ["PSs9AnyObject", "OELanguageModelGenerator"]
 - !private ["PSs9AnyObject", "OEPocketsphinxController"]
+- !private ["PSs9AnyObject", "Selector"]
 - !private ["PSs9AnyObject", "String"]
 - !private ["PSs9AnyObject", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSs9AnyObject", "TLMHubDidDisconnectDeviceNotification"]
@@ -138,7 +148,7 @@ depends-member:
 - ["PSs9AnyObject", "audioSessionInterruptionDidEnd"]
 - !private ["PSs9AnyObject", "blackColor"]
 - ["PSs9AnyObject", "button1"]
-- ["PSs9AnyObject", "countDown"]
+- ["PSs9AnyObject", "counter"]
 - ["PSs9AnyObject", "currentPose"]
 - ["PSs9AnyObject", "currentPosition"]
 - ["PSs9AnyObject", "currentWord"]
@@ -204,8 +214,10 @@ depends-member:
 - ["PSs9AnyObject", "pushUpsDone"]
 - ["PSs9AnyObject", "quaternionCounter"]
 - !private ["PSs9AnyObject", "radians"]
+- ["PSs9AnyObject", "resetButton"]
 - !private ["PSs9AnyObject", "roll"]
 - ["PSs9AnyObject", "rowText"]
+- !private ["PSs9AnyObject", "scheduledTimerWithTimeInterval"]
 - !private ["PSs9AnyObject", "secondsOfSilenceToDetect"]
 - !private ["PSs9AnyObject", "setActive"]
 - !private ["PSs9AnyObject", "settingsInNavigationController"]
@@ -216,10 +228,13 @@ depends-member:
 - ["PSs9AnyObject", "startPosition"]
 - ["PSs9AnyObject", "stateText"]
 - ["PSs9AnyObject", "stop"]
+- ["PSs9AnyObject", "sum"]
 - !private ["PSs9AnyObject", "text"]
 - !private ["PSs9AnyObject", "textColor"]
+- ["PSs9AnyObject", "timer"]
 - !private ["PSs9AnyObject", "transform"]
 - !private ["PSs9AnyObject", "type"]
+- ["PSs9AnyObject", "update"]
 - !private ["PSs9AnyObject", "userInfo"]
 - !private ["PSs9AnyObject", "vadThreshold"]
 - ["PSs9AnyObject", "viewDidAppear"]
@@ -246,10 +261,12 @@ depends-member:
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSNotificationCenter"]
 - !private ["PSs11CVarArgType", "NSString"]
+- ["PSs11CVarArgType", "NSTimer"]
 - !private ["PSs11CVarArgType", "OEAcousticModel"]
 - ["PSs11CVarArgType", "OEEventsObserver"]
 - !private ["PSs11CVarArgType", "OELanguageModelGenerator"]
 - !private ["PSs11CVarArgType", "OEPocketsphinxController"]
+- !private ["PSs11CVarArgType", "Selector"]
 - !private ["PSs11CVarArgType", "String"]
 - !private ["PSs11CVarArgType", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSs11CVarArgType", "TLMHubDidDisconnectDeviceNotification"]
@@ -271,7 +288,7 @@ depends-member:
 - ["PSs11CVarArgType", "audioSessionInterruptionDidEnd"]
 - !private ["PSs11CVarArgType", "blackColor"]
 - ["PSs11CVarArgType", "button1"]
-- ["PSs11CVarArgType", "countDown"]
+- ["PSs11CVarArgType", "counter"]
 - ["PSs11CVarArgType", "currentPose"]
 - ["PSs11CVarArgType", "currentPosition"]
 - ["PSs11CVarArgType", "currentWord"]
@@ -337,8 +354,10 @@ depends-member:
 - ["PSs11CVarArgType", "pushUpsDone"]
 - ["PSs11CVarArgType", "quaternionCounter"]
 - !private ["PSs11CVarArgType", "radians"]
+- ["PSs11CVarArgType", "resetButton"]
 - !private ["PSs11CVarArgType", "roll"]
 - ["PSs11CVarArgType", "rowText"]
+- !private ["PSs11CVarArgType", "scheduledTimerWithTimeInterval"]
 - !private ["PSs11CVarArgType", "secondsOfSilenceToDetect"]
 - !private ["PSs11CVarArgType", "setActive"]
 - !private ["PSs11CVarArgType", "settingsInNavigationController"]
@@ -349,10 +368,13 @@ depends-member:
 - ["PSs11CVarArgType", "startPosition"]
 - ["PSs11CVarArgType", "stateText"]
 - ["PSs11CVarArgType", "stop"]
+- ["PSs11CVarArgType", "sum"]
 - !private ["PSs11CVarArgType", "text"]
 - !private ["PSs11CVarArgType", "textColor"]
+- ["PSs11CVarArgType", "timer"]
 - !private ["PSs11CVarArgType", "transform"]
 - !private ["PSs11CVarArgType", "type"]
+- ["PSs11CVarArgType", "update"]
 - !private ["PSs11CVarArgType", "userInfo"]
 - !private ["PSs11CVarArgType", "vadThreshold"]
 - ["PSs11CVarArgType", "viewDidAppear"]
@@ -387,10 +409,12 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "NSNotificationCenter"]
 - !private ["PSs23CustomStringConvertible", "NSString"]
+- ["PSs23CustomStringConvertible", "NSTimer"]
 - !private ["PSs23CustomStringConvertible", "OEAcousticModel"]
 - ["PSs23CustomStringConvertible", "OEEventsObserver"]
 - !private ["PSs23CustomStringConvertible", "OELanguageModelGenerator"]
 - !private ["PSs23CustomStringConvertible", "OEPocketsphinxController"]
+- !private ["PSs23CustomStringConvertible", "Selector"]
 - !private ["PSs23CustomStringConvertible", "String"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - !private ["PSs23CustomStringConvertible", "TLMHubDidConnectDeviceNotification"]
@@ -415,7 +439,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "audioSessionInterruptionDidEnd"]
 - !private ["PSs23CustomStringConvertible", "blackColor"]
 - ["PSs23CustomStringConvertible", "button1"]
-- ["PSs23CustomStringConvertible", "countDown"]
+- ["PSs23CustomStringConvertible", "counter"]
 - ["PSs23CustomStringConvertible", "currentPose"]
 - ["PSs23CustomStringConvertible", "currentPosition"]
 - ["PSs23CustomStringConvertible", "currentWord"]
@@ -481,8 +505,10 @@ depends-member:
 - ["PSs23CustomStringConvertible", "pushUpsDone"]
 - ["PSs23CustomStringConvertible", "quaternionCounter"]
 - !private ["PSs23CustomStringConvertible", "radians"]
+- ["PSs23CustomStringConvertible", "resetButton"]
 - !private ["PSs23CustomStringConvertible", "roll"]
 - ["PSs23CustomStringConvertible", "rowText"]
+- !private ["PSs23CustomStringConvertible", "scheduledTimerWithTimeInterval"]
 - !private ["PSs23CustomStringConvertible", "secondsOfSilenceToDetect"]
 - !private ["PSs23CustomStringConvertible", "setActive"]
 - !private ["PSs23CustomStringConvertible", "settingsInNavigationController"]
@@ -494,10 +520,13 @@ depends-member:
 - ["PSs23CustomStringConvertible", "stateText"]
 - ["PSs23CustomStringConvertible", "stop"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
+- ["PSs23CustomStringConvertible", "sum"]
 - !private ["PSs23CustomStringConvertible", "text"]
 - !private ["PSs23CustomStringConvertible", "textColor"]
+- ["PSs23CustomStringConvertible", "timer"]
 - !private ["PSs23CustomStringConvertible", "transform"]
 - !private ["PSs23CustomStringConvertible", "type"]
+- ["PSs23CustomStringConvertible", "update"]
 - !private ["PSs23CustomStringConvertible", "userInfo"]
 - !private ["PSs23CustomStringConvertible", "vadThreshold"]
 - ["PSs23CustomStringConvertible", "viewDidAppear"]
@@ -531,10 +560,12 @@ depends-member:
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSNotificationCenter"]
 - !private ["PSs9Equatable", "NSString"]
+- ["PSs9Equatable", "NSTimer"]
 - !private ["PSs9Equatable", "OEAcousticModel"]
 - ["PSs9Equatable", "OEEventsObserver"]
 - !private ["PSs9Equatable", "OELanguageModelGenerator"]
 - !private ["PSs9Equatable", "OEPocketsphinxController"]
+- !private ["PSs9Equatable", "Selector"]
 - !private ["PSs9Equatable", "String"]
 - !private ["PSs9Equatable", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSs9Equatable", "TLMHubDidDisconnectDeviceNotification"]
@@ -560,7 +591,7 @@ depends-member:
 - ["PSs9Equatable", "audioSessionInterruptionDidEnd"]
 - !private ["PSs9Equatable", "blackColor"]
 - ["PSs9Equatable", "button1"]
-- ["PSs9Equatable", "countDown"]
+- ["PSs9Equatable", "counter"]
 - ["PSs9Equatable", "currentPose"]
 - ["PSs9Equatable", "currentPosition"]
 - ["PSs9Equatable", "currentWord"]
@@ -626,8 +657,10 @@ depends-member:
 - ["PSs9Equatable", "pushUpsDone"]
 - ["PSs9Equatable", "quaternionCounter"]
 - !private ["PSs9Equatable", "radians"]
+- ["PSs9Equatable", "resetButton"]
 - !private ["PSs9Equatable", "roll"]
 - ["PSs9Equatable", "rowText"]
+- !private ["PSs9Equatable", "scheduledTimerWithTimeInterval"]
 - !private ["PSs9Equatable", "secondsOfSilenceToDetect"]
 - !private ["PSs9Equatable", "setActive"]
 - !private ["PSs9Equatable", "settingsInNavigationController"]
@@ -638,10 +671,13 @@ depends-member:
 - ["PSs9Equatable", "startPosition"]
 - ["PSs9Equatable", "stateText"]
 - ["PSs9Equatable", "stop"]
+- ["PSs9Equatable", "sum"]
 - !private ["PSs9Equatable", "text"]
 - !private ["PSs9Equatable", "textColor"]
+- ["PSs9Equatable", "timer"]
 - !private ["PSs9Equatable", "transform"]
 - !private ["PSs9Equatable", "type"]
+- ["PSs9Equatable", "update"]
 - !private ["PSs9Equatable", "userInfo"]
 - !private ["PSs9Equatable", "vadThreshold"]
 - ["PSs9Equatable", "viewDidAppear"]
@@ -671,10 +707,12 @@ depends-member:
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSNotificationCenter"]
 - !private ["PSs8Hashable", "NSString"]
+- ["PSs8Hashable", "NSTimer"]
 - !private ["PSs8Hashable", "OEAcousticModel"]
 - ["PSs8Hashable", "OEEventsObserver"]
 - !private ["PSs8Hashable", "OELanguageModelGenerator"]
 - !private ["PSs8Hashable", "OEPocketsphinxController"]
+- !private ["PSs8Hashable", "Selector"]
 - !private ["PSs8Hashable", "String"]
 - !private ["PSs8Hashable", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSs8Hashable", "TLMHubDidDisconnectDeviceNotification"]
@@ -699,7 +737,7 @@ depends-member:
 - ["PSs8Hashable", "audioSessionInterruptionDidEnd"]
 - !private ["PSs8Hashable", "blackColor"]
 - ["PSs8Hashable", "button1"]
-- ["PSs8Hashable", "countDown"]
+- ["PSs8Hashable", "counter"]
 - ["PSs8Hashable", "currentPose"]
 - ["PSs8Hashable", "currentPosition"]
 - ["PSs8Hashable", "currentWord"]
@@ -765,8 +803,10 @@ depends-member:
 - ["PSs8Hashable", "pushUpsDone"]
 - ["PSs8Hashable", "quaternionCounter"]
 - !private ["PSs8Hashable", "radians"]
+- ["PSs8Hashable", "resetButton"]
 - !private ["PSs8Hashable", "roll"]
 - ["PSs8Hashable", "rowText"]
+- !private ["PSs8Hashable", "scheduledTimerWithTimeInterval"]
 - !private ["PSs8Hashable", "secondsOfSilenceToDetect"]
 - !private ["PSs8Hashable", "setActive"]
 - !private ["PSs8Hashable", "settingsInNavigationController"]
@@ -777,10 +817,13 @@ depends-member:
 - ["PSs8Hashable", "startPosition"]
 - ["PSs8Hashable", "stateText"]
 - ["PSs8Hashable", "stop"]
+- ["PSs8Hashable", "sum"]
 - !private ["PSs8Hashable", "text"]
 - !private ["PSs8Hashable", "textColor"]
+- ["PSs8Hashable", "timer"]
 - !private ["PSs8Hashable", "transform"]
 - !private ["PSs8Hashable", "type"]
+- ["PSs8Hashable", "update"]
 - !private ["PSs8Hashable", "userInfo"]
 - !private ["PSs8Hashable", "vadThreshold"]
 - ["PSs8Hashable", "viewDidAppear"]
@@ -812,10 +855,12 @@ depends-member:
 - !private ["PSo8NSCoding", "GLKitPolyfill"]
 - !private ["PSo8NSCoding", "NSNotificationCenter"]
 - !private ["PSo8NSCoding", "NSString"]
+- ["PSo8NSCoding", "NSTimer"]
 - !private ["PSo8NSCoding", "OEAcousticModel"]
 - ["PSo8NSCoding", "OEEventsObserver"]
 - !private ["PSo8NSCoding", "OELanguageModelGenerator"]
 - !private ["PSo8NSCoding", "OEPocketsphinxController"]
+- !private ["PSo8NSCoding", "Selector"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo8NSCoding", "TLMHubDidDisconnectDeviceNotification"]
@@ -836,7 +881,7 @@ depends-member:
 - ["PSo8NSCoding", "audioSessionInterruptionDidEnd"]
 - !private ["PSo8NSCoding", "blackColor"]
 - ["PSo8NSCoding", "button1"]
-- ["PSo8NSCoding", "countDown"]
+- ["PSo8NSCoding", "counter"]
 - ["PSo8NSCoding", "currentPose"]
 - ["PSo8NSCoding", "currentPosition"]
 - ["PSo8NSCoding", "currentWord"]
@@ -890,6 +935,7 @@ depends-member:
 - ["PSo8NSCoding", "pushUpState"]
 - ["PSo8NSCoding", "pushUpsDone"]
 - ["PSo8NSCoding", "quaternionCounter"]
+- ["PSo8NSCoding", "resetButton"]
 - ["PSo8NSCoding", "rowText"]
 - !private ["PSo8NSCoding", "settingsInNavigationController"]
 - ["PSo8NSCoding", "start"]
@@ -897,9 +943,12 @@ depends-member:
 - ["PSo8NSCoding", "startPosition"]
 - ["PSo8NSCoding", "stateText"]
 - ["PSo8NSCoding", "stop"]
+- ["PSo8NSCoding", "sum"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "timer"]
 - !private ["PSo8NSCoding", "transform"]
+- ["PSo8NSCoding", "update"]
 - !private ["PSo8NSCoding", "userInfo"]
 - ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidDisappear"]
@@ -920,10 +969,12 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "GLKitPolyfill"]
 - !private ["PSo26NSExtensionRequestHandling", "NSNotificationCenter"]
 - !private ["PSo26NSExtensionRequestHandling", "NSString"]
+- ["PSo26NSExtensionRequestHandling", "NSTimer"]
 - !private ["PSo26NSExtensionRequestHandling", "OEAcousticModel"]
 - ["PSo26NSExtensionRequestHandling", "OEEventsObserver"]
 - !private ["PSo26NSExtensionRequestHandling", "OELanguageModelGenerator"]
 - !private ["PSo26NSExtensionRequestHandling", "OEPocketsphinxController"]
+- !private ["PSo26NSExtensionRequestHandling", "Selector"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "TLMHubDidDisconnectDeviceNotification"]
@@ -943,7 +994,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "audioSessionInterruptionDidBegin"]
 - ["PSo26NSExtensionRequestHandling", "audioSessionInterruptionDidEnd"]
 - ["PSo26NSExtensionRequestHandling", "button1"]
-- ["PSo26NSExtensionRequestHandling", "countDown"]
+- ["PSo26NSExtensionRequestHandling", "counter"]
 - ["PSo26NSExtensionRequestHandling", "currentPose"]
 - ["PSo26NSExtensionRequestHandling", "currentPosition"]
 - ["PSo26NSExtensionRequestHandling", "currentWord"]
@@ -992,6 +1043,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "pushUpState"]
 - ["PSo26NSExtensionRequestHandling", "pushUpsDone"]
 - ["PSo26NSExtensionRequestHandling", "quaternionCounter"]
+- ["PSo26NSExtensionRequestHandling", "resetButton"]
 - ["PSo26NSExtensionRequestHandling", "rowText"]
 - !private ["PSo26NSExtensionRequestHandling", "settingsInNavigationController"]
 - ["PSo26NSExtensionRequestHandling", "start"]
@@ -999,6 +1051,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "startPosition"]
 - ["PSo26NSExtensionRequestHandling", "stateText"]
 - ["PSo26NSExtensionRequestHandling", "stop"]
+- ["PSo26NSExtensionRequestHandling", "sum"]
+- ["PSo26NSExtensionRequestHandling", "timer"]
+- ["PSo26NSExtensionRequestHandling", "update"]
 - ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidDisappear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -1022,10 +1077,12 @@ depends-member:
 - ["CSo8NSObject", "NSNotification"]
 - !private ["CSo8NSObject", "NSNotificationCenter"]
 - !private ["CSo8NSObject", "NSString"]
+- ["CSo8NSObject", "NSTimer"]
 - !private ["CSo8NSObject", "OEAcousticModel"]
 - ["CSo8NSObject", "OEEventsObserver"]
 - !private ["CSo8NSObject", "OELanguageModelGenerator"]
 - !private ["CSo8NSObject", "OEPocketsphinxController"]
+- !private ["CSo8NSObject", "Selector"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TLMAccelerometerEvent"]
 - !private ["CSo8NSObject", "TLMGyroscopeEvent"]
@@ -1055,7 +1112,7 @@ depends-member:
 - ["CSo8NSObject", "audioSessionInterruptionDidEnd"]
 - !private ["CSo8NSObject", "blackColor"]
 - ["CSo8NSObject", "button1"]
-- ["CSo8NSObject", "countDown"]
+- ["CSo8NSObject", "counter"]
 - ["CSo8NSObject", "currentPose"]
 - ["CSo8NSObject", "currentPosition"]
 - ["CSo8NSObject", "currentWord"]
@@ -1121,8 +1178,10 @@ depends-member:
 - ["CSo8NSObject", "pushUpsDone"]
 - ["CSo8NSObject", "quaternionCounter"]
 - !private ["CSo8NSObject", "radians"]
+- ["CSo8NSObject", "resetButton"]
 - !private ["CSo8NSObject", "roll"]
 - ["CSo8NSObject", "rowText"]
+- !private ["CSo8NSObject", "scheduledTimerWithTimeInterval"]
 - !private ["CSo8NSObject", "secondsOfSilenceToDetect"]
 - !private ["CSo8NSObject", "setActive"]
 - !private ["CSo8NSObject", "settingsInNavigationController"]
@@ -1133,10 +1192,13 @@ depends-member:
 - ["CSo8NSObject", "startPosition"]
 - ["CSo8NSObject", "stateText"]
 - ["CSo8NSObject", "stop"]
+- ["CSo8NSObject", "sum"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "timer"]
 - !private ["CSo8NSObject", "transform"]
 - !private ["CSo8NSObject", "type"]
+- ["CSo8NSObject", "update"]
 - !private ["CSo8NSObject", "userInfo"]
 - !private ["CSo8NSObject", "vadThreshold"]
 - ["CSo8NSObject", "viewDidAppear"]
@@ -1152,10 +1214,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "GLKitPolyfill"]
 - !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
 - !private ["PSo16NSObjectProtocol", "NSString"]
+- ["PSo16NSObjectProtocol", "NSTimer"]
 - !private ["PSo16NSObjectProtocol", "OEAcousticModel"]
 - ["PSo16NSObjectProtocol", "OEEventsObserver"]
 - !private ["PSo16NSObjectProtocol", "OELanguageModelGenerator"]
 - !private ["PSo16NSObjectProtocol", "OEPocketsphinxController"]
+- !private ["PSo16NSObjectProtocol", "Selector"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo16NSObjectProtocol", "TLMHubDidDisconnectDeviceNotification"]
@@ -1177,7 +1241,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "audioSessionInterruptionDidEnd"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
 - ["PSo16NSObjectProtocol", "button1"]
-- ["PSo16NSObjectProtocol", "countDown"]
+- ["PSo16NSObjectProtocol", "counter"]
 - ["PSo16NSObjectProtocol", "currentPose"]
 - ["PSo16NSObjectProtocol", "currentPosition"]
 - ["PSo16NSObjectProtocol", "currentWord"]
@@ -1243,8 +1307,10 @@ depends-member:
 - ["PSo16NSObjectProtocol", "pushUpsDone"]
 - ["PSo16NSObjectProtocol", "quaternionCounter"]
 - !private ["PSo16NSObjectProtocol", "radians"]
+- ["PSo16NSObjectProtocol", "resetButton"]
 - !private ["PSo16NSObjectProtocol", "roll"]
 - ["PSo16NSObjectProtocol", "rowText"]
+- !private ["PSo16NSObjectProtocol", "scheduledTimerWithTimeInterval"]
 - !private ["PSo16NSObjectProtocol", "secondsOfSilenceToDetect"]
 - !private ["PSo16NSObjectProtocol", "setActive"]
 - !private ["PSo16NSObjectProtocol", "settingsInNavigationController"]
@@ -1255,10 +1321,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "startPosition"]
 - ["PSo16NSObjectProtocol", "stateText"]
 - ["PSo16NSObjectProtocol", "stop"]
+- ["PSo16NSObjectProtocol", "sum"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "timer"]
 - !private ["PSo16NSObjectProtocol", "transform"]
 - !private ["PSo16NSObjectProtocol", "type"]
+- ["PSo16NSObjectProtocol", "update"]
 - !private ["PSo16NSObjectProtocol", "userInfo"]
 - !private ["PSo16NSObjectProtocol", "vadThreshold"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
@@ -1273,6 +1342,9 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
+- ["CSo7NSTimer", "init"]
+- !private ["CSo7NSTimer", "scheduledTimerWithTimeInterval"]
+- !private ["PSs21NilLiteralConvertible", "init"]
 - !private ["CSo15OEAcousticModel", "pathToModel"]
 - !private ["CSo16OEEventsObserver", "delegate"]
 - ["CSo16OEEventsObserver", "init"]
@@ -1283,10 +1355,12 @@ depends-member:
 - !private ["PSo24OEEventsObserverDelegate", "GLKitPolyfill"]
 - !private ["PSo24OEEventsObserverDelegate", "NSNotificationCenter"]
 - !private ["PSo24OEEventsObserverDelegate", "NSString"]
+- ["PSo24OEEventsObserverDelegate", "NSTimer"]
 - !private ["PSo24OEEventsObserverDelegate", "OEAcousticModel"]
 - ["PSo24OEEventsObserverDelegate", "OEEventsObserver"]
 - !private ["PSo24OEEventsObserverDelegate", "OELanguageModelGenerator"]
 - !private ["PSo24OEEventsObserverDelegate", "OEPocketsphinxController"]
+- !private ["PSo24OEEventsObserverDelegate", "Selector"]
 - !private ["PSo24OEEventsObserverDelegate", "String"]
 - !private ["PSo24OEEventsObserverDelegate", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo24OEEventsObserverDelegate", "TLMHubDidDisconnectDeviceNotification"]
@@ -1306,6 +1380,7 @@ depends-member:
 - ["PSo24OEEventsObserverDelegate", "audioSessionInterruptionDidBegin"]
 - ["PSo24OEEventsObserverDelegate", "audioSessionInterruptionDidEnd"]
 - !private ["PSo24OEEventsObserverDelegate", "button1"]
+- !private ["PSo24OEEventsObserverDelegate", "counter"]
 - !private ["PSo24OEEventsObserverDelegate", "currentPose"]
 - !private ["PSo24OEEventsObserverDelegate", "currentPosition"]
 - !private ["PSo24OEEventsObserverDelegate", "dicPath"]
@@ -1342,6 +1417,7 @@ depends-member:
 - !private ["PSo24OEEventsObserverDelegate", "pushUpState"]
 - !private ["PSo24OEEventsObserverDelegate", "pushUpsDone"]
 - !private ["PSo24OEEventsObserverDelegate", "quaternionCounter"]
+- !private ["PSo24OEEventsObserverDelegate", "resetButton"]
 - !private ["PSo24OEEventsObserverDelegate", "rowText"]
 - !private ["PSo24OEEventsObserverDelegate", "secondsOfSilenceToDetect"]
 - !private ["PSo24OEEventsObserverDelegate", "setActive"]
@@ -1352,6 +1428,8 @@ depends-member:
 - !private ["PSo24OEEventsObserverDelegate", "startPosition"]
 - !private ["PSo24OEEventsObserverDelegate", "stateText"]
 - !private ["PSo24OEEventsObserverDelegate", "stop"]
+- !private ["PSo24OEEventsObserverDelegate", "sum"]
+- !private ["PSo24OEEventsObserverDelegate", "timer"]
 - !private ["PSo24OEEventsObserverDelegate", "vadThreshold"]
 - !private ["PSo24OEEventsObserverDelegate", "words"]
 - !private ["PSo24OEEventsObserverDelegate", "yawText"]
@@ -1380,6 +1458,7 @@ depends-member:
 - ["PSs16RawRepresentable", "WaveIn"]
 - ["PSs16RawRepresentable", "WaveOut"]
 - !private ["V10ObjectiveC8Selector", "deinit"]
+- !private ["V10ObjectiveC8Selector", "init"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
 - !private ["PSs12SequenceType", "Index"]
@@ -1425,10 +1504,12 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "GLKitPolyfill"]
 - !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
 - !private ["PSo21UIAppearanceContainer", "NSString"]
+- ["PSo21UIAppearanceContainer", "NSTimer"]
 - !private ["PSo21UIAppearanceContainer", "OEAcousticModel"]
 - ["PSo21UIAppearanceContainer", "OEEventsObserver"]
 - !private ["PSo21UIAppearanceContainer", "OELanguageModelGenerator"]
 - !private ["PSo21UIAppearanceContainer", "OEPocketsphinxController"]
+- !private ["PSo21UIAppearanceContainer", "Selector"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo21UIAppearanceContainer", "TLMHubDidDisconnectDeviceNotification"]
@@ -1448,7 +1529,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "audioSessionInterruptionDidBegin"]
 - ["PSo21UIAppearanceContainer", "audioSessionInterruptionDidEnd"]
 - ["PSo21UIAppearanceContainer", "button1"]
-- ["PSo21UIAppearanceContainer", "countDown"]
+- ["PSo21UIAppearanceContainer", "counter"]
 - ["PSo21UIAppearanceContainer", "currentPose"]
 - ["PSo21UIAppearanceContainer", "currentPosition"]
 - ["PSo21UIAppearanceContainer", "currentWord"]
@@ -1501,6 +1582,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "pushUpState"]
 - ["PSo21UIAppearanceContainer", "pushUpsDone"]
 - ["PSo21UIAppearanceContainer", "quaternionCounter"]
+- ["PSo21UIAppearanceContainer", "resetButton"]
 - ["PSo21UIAppearanceContainer", "rowText"]
 - !private ["PSo21UIAppearanceContainer", "settingsInNavigationController"]
 - ["PSo21UIAppearanceContainer", "start"]
@@ -1508,8 +1590,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "startPosition"]
 - ["PSo21UIAppearanceContainer", "stateText"]
 - ["PSo21UIAppearanceContainer", "stop"]
+- ["PSo21UIAppearanceContainer", "sum"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "timer"]
+- ["PSo21UIAppearanceContainer", "update"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidDisappear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
@@ -1526,10 +1611,12 @@ depends-member:
 - !private ["PSo18UIContentContainer", "GLKitPolyfill"]
 - !private ["PSo18UIContentContainer", "NSNotificationCenter"]
 - !private ["PSo18UIContentContainer", "NSString"]
+- ["PSo18UIContentContainer", "NSTimer"]
 - !private ["PSo18UIContentContainer", "OEAcousticModel"]
 - ["PSo18UIContentContainer", "OEEventsObserver"]
 - !private ["PSo18UIContentContainer", "OELanguageModelGenerator"]
 - !private ["PSo18UIContentContainer", "OEPocketsphinxController"]
+- !private ["PSo18UIContentContainer", "Selector"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo18UIContentContainer", "TLMHubDidDisconnectDeviceNotification"]
@@ -1549,7 +1636,7 @@ depends-member:
 - ["PSo18UIContentContainer", "audioSessionInterruptionDidBegin"]
 - ["PSo18UIContentContainer", "audioSessionInterruptionDidEnd"]
 - ["PSo18UIContentContainer", "button1"]
-- ["PSo18UIContentContainer", "countDown"]
+- ["PSo18UIContentContainer", "counter"]
 - ["PSo18UIContentContainer", "currentPose"]
 - ["PSo18UIContentContainer", "currentPosition"]
 - ["PSo18UIContentContainer", "currentWord"]
@@ -1598,6 +1685,7 @@ depends-member:
 - ["PSo18UIContentContainer", "pushUpState"]
 - ["PSo18UIContentContainer", "pushUpsDone"]
 - ["PSo18UIContentContainer", "quaternionCounter"]
+- ["PSo18UIContentContainer", "resetButton"]
 - ["PSo18UIContentContainer", "rowText"]
 - !private ["PSo18UIContentContainer", "settingsInNavigationController"]
 - ["PSo18UIContentContainer", "start"]
@@ -1605,6 +1693,9 @@ depends-member:
 - ["PSo18UIContentContainer", "startPosition"]
 - ["PSo18UIContentContainer", "stateText"]
 - ["PSo18UIContentContainer", "stop"]
+- ["PSo18UIContentContainer", "sum"]
+- ["PSo18UIContentContainer", "timer"]
+- ["PSo18UIContentContainer", "update"]
 - ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidDisappear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -1632,10 +1723,12 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "GLKitPolyfill"]
 - !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
 - !private ["PSo18UIFocusEnvironment", "NSString"]
+- ["PSo18UIFocusEnvironment", "NSTimer"]
 - !private ["PSo18UIFocusEnvironment", "OEAcousticModel"]
 - ["PSo18UIFocusEnvironment", "OEEventsObserver"]
 - !private ["PSo18UIFocusEnvironment", "OELanguageModelGenerator"]
 - !private ["PSo18UIFocusEnvironment", "OEPocketsphinxController"]
+- !private ["PSo18UIFocusEnvironment", "Selector"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo18UIFocusEnvironment", "TLMHubDidDisconnectDeviceNotification"]
@@ -1655,7 +1748,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "audioSessionInterruptionDidBegin"]
 - ["PSo18UIFocusEnvironment", "audioSessionInterruptionDidEnd"]
 - ["PSo18UIFocusEnvironment", "button1"]
-- ["PSo18UIFocusEnvironment", "countDown"]
+- ["PSo18UIFocusEnvironment", "counter"]
 - ["PSo18UIFocusEnvironment", "currentPose"]
 - ["PSo18UIFocusEnvironment", "currentPosition"]
 - ["PSo18UIFocusEnvironment", "currentWord"]
@@ -1708,6 +1801,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "pushUpState"]
 - ["PSo18UIFocusEnvironment", "pushUpsDone"]
 - ["PSo18UIFocusEnvironment", "quaternionCounter"]
+- ["PSo18UIFocusEnvironment", "resetButton"]
 - ["PSo18UIFocusEnvironment", "rowText"]
 - !private ["PSo18UIFocusEnvironment", "settingsInNavigationController"]
 - ["PSo18UIFocusEnvironment", "start"]
@@ -1715,8 +1809,11 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "startPosition"]
 - ["PSo18UIFocusEnvironment", "stateText"]
 - ["PSo18UIFocusEnvironment", "stop"]
+- ["PSo18UIFocusEnvironment", "sum"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "timer"]
+- ["PSo18UIFocusEnvironment", "update"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
 - ["PSo18UIFocusEnvironment", "viewDidDisappear"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
@@ -1746,10 +1843,12 @@ depends-member:
 - ["CSo11UIResponder", "NSNotification"]
 - !private ["CSo11UIResponder", "NSNotificationCenter"]
 - !private ["CSo11UIResponder", "NSString"]
+- ["CSo11UIResponder", "NSTimer"]
 - !private ["CSo11UIResponder", "OEAcousticModel"]
 - ["CSo11UIResponder", "OEEventsObserver"]
 - !private ["CSo11UIResponder", "OELanguageModelGenerator"]
 - !private ["CSo11UIResponder", "OEPocketsphinxController"]
+- !private ["CSo11UIResponder", "Selector"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "TLMAccelerometerEvent"]
 - !private ["CSo11UIResponder", "TLMGyroscopeEvent"]
@@ -1777,7 +1876,7 @@ depends-member:
 - ["CSo11UIResponder", "audioSessionInterruptionDidBegin"]
 - ["CSo11UIResponder", "audioSessionInterruptionDidEnd"]
 - ["CSo11UIResponder", "button1"]
-- ["CSo11UIResponder", "countDown"]
+- ["CSo11UIResponder", "counter"]
 - ["CSo11UIResponder", "currentPose"]
 - ["CSo11UIResponder", "currentPosition"]
 - ["CSo11UIResponder", "currentWord"]
@@ -1830,6 +1929,7 @@ depends-member:
 - ["CSo11UIResponder", "pushUpState"]
 - ["CSo11UIResponder", "pushUpsDone"]
 - ["CSo11UIResponder", "quaternionCounter"]
+- ["CSo11UIResponder", "resetButton"]
 - ["CSo11UIResponder", "rowText"]
 - !private ["CSo11UIResponder", "settingsInNavigationController"]
 - ["CSo11UIResponder", "start"]
@@ -1837,8 +1937,11 @@ depends-member:
 - ["CSo11UIResponder", "startPosition"]
 - ["CSo11UIResponder", "stateText"]
 - ["CSo11UIResponder", "stop"]
+- ["CSo11UIResponder", "sum"]
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "timer"]
+- ["CSo11UIResponder", "update"]
 - ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidDisappear"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -1851,10 +1954,12 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "GLKitPolyfill"]
 - !private ["PSo16UIStateRestoring", "NSNotificationCenter"]
 - !private ["PSo16UIStateRestoring", "NSString"]
+- ["PSo16UIStateRestoring", "NSTimer"]
 - !private ["PSo16UIStateRestoring", "OEAcousticModel"]
 - ["PSo16UIStateRestoring", "OEEventsObserver"]
 - !private ["PSo16UIStateRestoring", "OELanguageModelGenerator"]
 - !private ["PSo16UIStateRestoring", "OEPocketsphinxController"]
+- !private ["PSo16UIStateRestoring", "Selector"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo16UIStateRestoring", "TLMHubDidDisconnectDeviceNotification"]
@@ -1874,7 +1979,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "audioSessionInterruptionDidBegin"]
 - ["PSo16UIStateRestoring", "audioSessionInterruptionDidEnd"]
 - ["PSo16UIStateRestoring", "button1"]
-- ["PSo16UIStateRestoring", "countDown"]
+- ["PSo16UIStateRestoring", "counter"]
 - ["PSo16UIStateRestoring", "currentPose"]
 - ["PSo16UIStateRestoring", "currentPosition"]
 - ["PSo16UIStateRestoring", "currentWord"]
@@ -1923,6 +2028,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "pushUpState"]
 - ["PSo16UIStateRestoring", "pushUpsDone"]
 - ["PSo16UIStateRestoring", "quaternionCounter"]
+- ["PSo16UIStateRestoring", "resetButton"]
 - ["PSo16UIStateRestoring", "rowText"]
 - !private ["PSo16UIStateRestoring", "settingsInNavigationController"]
 - ["PSo16UIStateRestoring", "start"]
@@ -1930,6 +2036,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "startPosition"]
 - ["PSo16UIStateRestoring", "stateText"]
 - ["PSo16UIStateRestoring", "stop"]
+- ["PSo16UIStateRestoring", "sum"]
+- ["PSo16UIStateRestoring", "timer"]
+- ["PSo16UIStateRestoring", "update"]
 - ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidDisappear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -1949,10 +2058,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "GLKitPolyfill"]
 - !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
 - !private ["PSo18UITraitEnvironment", "NSString"]
+- ["PSo18UITraitEnvironment", "NSTimer"]
 - !private ["PSo18UITraitEnvironment", "OEAcousticModel"]
 - ["PSo18UITraitEnvironment", "OEEventsObserver"]
 - !private ["PSo18UITraitEnvironment", "OELanguageModelGenerator"]
 - !private ["PSo18UITraitEnvironment", "OEPocketsphinxController"]
+- !private ["PSo18UITraitEnvironment", "Selector"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "TLMHubDidConnectDeviceNotification"]
 - !private ["PSo18UITraitEnvironment", "TLMHubDidDisconnectDeviceNotification"]
@@ -1972,7 +2083,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "audioSessionInterruptionDidBegin"]
 - ["PSo18UITraitEnvironment", "audioSessionInterruptionDidEnd"]
 - ["PSo18UITraitEnvironment", "button1"]
-- ["PSo18UITraitEnvironment", "countDown"]
+- ["PSo18UITraitEnvironment", "counter"]
 - ["PSo18UITraitEnvironment", "currentPose"]
 - ["PSo18UITraitEnvironment", "currentPosition"]
 - ["PSo18UITraitEnvironment", "currentWord"]
@@ -2025,6 +2136,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "pushUpState"]
 - ["PSo18UITraitEnvironment", "pushUpsDone"]
 - ["PSo18UITraitEnvironment", "quaternionCounter"]
+- ["PSo18UITraitEnvironment", "resetButton"]
 - ["PSo18UITraitEnvironment", "rowText"]
 - !private ["PSo18UITraitEnvironment", "settingsInNavigationController"]
 - ["PSo18UITraitEnvironment", "start"]
@@ -2032,8 +2144,11 @@ depends-member:
 - ["PSo18UITraitEnvironment", "startPosition"]
 - ["PSo18UITraitEnvironment", "stateText"]
 - ["PSo18UITraitEnvironment", "stop"]
+- ["PSo18UITraitEnvironment", "sum"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "timer"]
+- ["PSo18UITraitEnvironment", "update"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
 - ["PSo18UITraitEnvironment", "viewDidDisappear"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
@@ -2059,10 +2174,12 @@ depends-member:
 - ["CSo16UIViewController", "NSNotification"]
 - !private ["CSo16UIViewController", "NSNotificationCenter"]
 - !private ["CSo16UIViewController", "NSString"]
+- ["CSo16UIViewController", "NSTimer"]
 - !private ["CSo16UIViewController", "OEAcousticModel"]
 - ["CSo16UIViewController", "OEEventsObserver"]
 - !private ["CSo16UIViewController", "OELanguageModelGenerator"]
 - !private ["CSo16UIViewController", "OEPocketsphinxController"]
+- !private ["CSo16UIViewController", "Selector"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "TLMAccelerometerEvent"]
 - !private ["CSo16UIViewController", "TLMGyroscopeEvent"]
@@ -2090,7 +2207,7 @@ depends-member:
 - ["CSo16UIViewController", "audioSessionInterruptionDidBegin"]
 - ["CSo16UIViewController", "audioSessionInterruptionDidEnd"]
 - ["CSo16UIViewController", "button1"]
-- ["CSo16UIViewController", "countDown"]
+- ["CSo16UIViewController", "counter"]
 - ["CSo16UIViewController", "currentPose"]
 - ["CSo16UIViewController", "currentPosition"]
 - ["CSo16UIViewController", "currentWord"]
@@ -2139,6 +2256,7 @@ depends-member:
 - ["CSo16UIViewController", "pushUpState"]
 - ["CSo16UIViewController", "pushUpsDone"]
 - ["CSo16UIViewController", "quaternionCounter"]
+- ["CSo16UIViewController", "resetButton"]
 - ["CSo16UIViewController", "rowText"]
 - !private ["CSo16UIViewController", "settingsInNavigationController"]
 - ["CSo16UIViewController", "start"]
@@ -2146,6 +2264,9 @@ depends-member:
 - ["CSo16UIViewController", "startPosition"]
 - ["CSo16UIViewController", "stateText"]
 - ["CSo16UIViewController", "stop"]
+- ["CSo16UIViewController", "sum"]
+- ["CSo16UIViewController", "timer"]
+- ["CSo16UIViewController", "update"]
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidDisappear"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -2166,10 +2287,12 @@ depends-member:
 - ["C13HelloMyoSwift14ViewController", "NSNotification"]
 - !private ["C13HelloMyoSwift14ViewController", "NSNotificationCenter"]
 - !private ["C13HelloMyoSwift14ViewController", "NSString"]
+- ["C13HelloMyoSwift14ViewController", "NSTimer"]
 - !private ["C13HelloMyoSwift14ViewController", "OEAcousticModel"]
 - ["C13HelloMyoSwift14ViewController", "OEEventsObserver"]
 - !private ["C13HelloMyoSwift14ViewController", "OELanguageModelGenerator"]
 - !private ["C13HelloMyoSwift14ViewController", "OEPocketsphinxController"]
+- !private ["C13HelloMyoSwift14ViewController", "Selector"]
 - ["C13HelloMyoSwift14ViewController", "String"]
 - !private ["C13HelloMyoSwift14ViewController", "TLMAccelerometerEvent"]
 - !private ["C13HelloMyoSwift14ViewController", "TLMGyroscopeEvent"]
@@ -2197,7 +2320,7 @@ depends-member:
 - ["C13HelloMyoSwift14ViewController", "audioSessionInterruptionDidBegin"]
 - ["C13HelloMyoSwift14ViewController", "audioSessionInterruptionDidEnd"]
 - ["C13HelloMyoSwift14ViewController", "button1"]
-- ["C13HelloMyoSwift14ViewController", "countDown"]
+- ["C13HelloMyoSwift14ViewController", "counter"]
 - ["C13HelloMyoSwift14ViewController", "currentPose"]
 - ["C13HelloMyoSwift14ViewController", "currentPosition"]
 - ["C13HelloMyoSwift14ViewController", "currentWord"]
@@ -2247,12 +2370,16 @@ depends-member:
 - ["C13HelloMyoSwift14ViewController", "pushUpState"]
 - ["C13HelloMyoSwift14ViewController", "pushUpsDone"]
 - ["C13HelloMyoSwift14ViewController", "quaternionCounter"]
+- ["C13HelloMyoSwift14ViewController", "resetButton"]
 - ["C13HelloMyoSwift14ViewController", "rowText"]
 - ["C13HelloMyoSwift14ViewController", "start"]
 - ["C13HelloMyoSwift14ViewController", "startListening"]
 - ["C13HelloMyoSwift14ViewController", "startPosition"]
 - ["C13HelloMyoSwift14ViewController", "stateText"]
 - ["C13HelloMyoSwift14ViewController", "stop"]
+- ["C13HelloMyoSwift14ViewController", "sum"]
+- ["C13HelloMyoSwift14ViewController", "timer"]
+- ["C13HelloMyoSwift14ViewController", "update"]
 - ["C13HelloMyoSwift14ViewController", "viewDidAppear"]
 - ["C13HelloMyoSwift14ViewController", "viewDidDisappear"]
 - ["C13HelloMyoSwift14ViewController", "viewDidLoad"]
@@ -2346,6 +2473,8 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
+- "CSo7NSTimer"
+- !private "PSs21NilLiteralConvertible"
 - !private "CSo15OEAcousticModel"
 - "CSo16OEEventsObserver"
 - "PSo24OEEventsObserverDelegate"
@@ -2417,7 +2546,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Users/john/Desktop/PushupCounterMyo/bridge.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/MyoKit.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/MyoKit.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
@@ -2425,22 +2554,22 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMHub.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMHub.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreBluetooth.swiftmodule"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMMyo.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMOrientationEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMMath.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMEulerAngles.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMAngle.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMAccelerometerEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMPose.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMArmSyncEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMSettingsViewController.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMGyroscopeEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMArmUnsyncEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMUnlockEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMLockEvent.h"
-- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/MyoKit.framework/Headers/TLMEmgEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMMyo.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMOrientationEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMMath.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMEulerAngles.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMAngle.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMAccelerometerEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMPose.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMArmSyncEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMSettingsViewController.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMGyroscopeEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMArmUnsyncEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMUnlockEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMLockEvent.h"
+- "/Users/john/Desktop/PushupCounterMyo/Pods/MyoSDK/Framework/MyoKit.framework/Headers/TLMEmgEvent.h"
 - "/Users/john/Desktop/PushupCounterMyo/./HelloMyoSwift/GLKitPolyfill.h"
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/OELanguageModelGenerator.h"
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/OEGrammarDefinitions.h"
@@ -2458,4 +2587,4 @@ depends-external:
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/sphinx_config.h"
 - "/Users/john/Desktop/PushupCounterMyo/Pods/OpenEarsDistribution/Framework/OpenEars.framework/Headers/OENotification.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "3d6fb3ceadebf3de4c49811ec09d5fb7"
+interface-hash: "ee48c64f00485b27e976e8fb4ae10e14"
