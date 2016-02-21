@@ -1,0 +1,11 @@
+Add the following lines to your header (the .h file). Under the imports at the very top:
+<pre>
+#import &lt;Slt/Slt.h&gt;
+#import &lt;OpenEars/OEFliteController.h&gt;
+</pre>
+
+Add these class properties to the other properties of your view controller or object:
+<pre>
+@property (strong, nonatomic) OEFliteController *fliteController;
+@property (strong, nonatomic) Slt *slt;
+</pre>

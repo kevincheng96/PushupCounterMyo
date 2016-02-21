@@ -1,0 +1,23 @@
+
+In the method where you want to create your language model (for instance your viewDidLoad method), add the following method call (replacing the placeholders like "WORD" and "A PHRASE" with actual words and phrases you want to be able to recognize):<p>
+<pre>
+OELanguageModelGenerator *lmGenerator = [[OELanguageModelGenerator alloc] init];
+
+NSArray *words = [NSArray arrayWithObjects:@"WORD", @"STATEMENT", @"OTHER WORD", @"A PHRASE", nil];
+NSString *name = @"NameIWantForMyLanguageModelFiles";
+NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" to create a Spanish language model instead of an English one.
+
+NSString *lmPath = nil;
+NSString *dicPath = nil;
+	
+if(err == nil) {
+		
+	lmPath = [lmGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"NameIWantForMyLanguageModelFiles"];
+	dicPath = [lmGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"NameIWantForMyLanguageModelFiles"];
+		
+} else {
+	NSLog(@"Error: %@",[err localizedDescription]);
+}
+</pre>
+
+It is a requirement to enter your words and phrases in all capital letters, since the model is generated against a dictionary in which the entries are capitalized (meaning that if the words in the array aren't capitalized, they will not match the dictionary and you will not have the widest variety of pronunciations understood for the word you are using).

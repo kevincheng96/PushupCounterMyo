@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C03F6211AF1011C00E49956 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C03F6201AF1011C00E49956 /* Slt.framework */; };
+		8C03F6221AF1011C00E49956 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C03F6201AF1011C00E49956 /* Slt.framework */; };
+		8C03F6231AF1011C00E49956 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C03F6201AF1011C00E49956 /* Slt.framework */; };
+		8C2F9B711507BEF20031011A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2F9B701507BEF20031011A /* UIKit.framework */; };
+		8C2F9B731507BEF20031011A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2F9B721507BEF20031011A /* Foundation.framework */; };
+		8C2F9B7B1507BEF20031011A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2F9B791507BEF20031011A /* InfoPlist.strings */; };
+		8C2F9B7D1507BEF20031011A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F9B7C1507BEF20031011A /* main.m */; };
+		8C2F9B811507BEF20031011A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F9B801507BEF20031011A /* AppDelegate.m */; };
+		8C2F9B841507BEF20031011A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F9B831507BEF20031011A /* ViewController.m */; };
+		8C2F9B871507BEF30031011A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2F9B851507BEF30031011A /* ViewController_iPhone.xib */; };
+		8C2F9B8A1507BEF30031011A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2F9B881507BEF30031011A /* ViewController_iPad.xib */; };
+		8C33F38F1A10F9CB00D56709 /* OETestTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C33F38E1A10F9CB00D56709 /* OETestTools.m */; };
+		8C3A7C481A5C426A00DF3791 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F9B831507BEF20031011A /* ViewController.m */; };
+		8C3A7C491A5C426A00DF3791 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2F9B831507BEF20031011A /* ViewController.m */; };
+		8C5914C819B71B0E00B40F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFB919ACA9A7007CA626 /* AudioToolbox.framework */; };
+		8C5914C919B71B0E00B40F1D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFBA19ACA9A7007CA626 /* AVFoundation.framework */; };
+		8C5914CC19B71B3500B40F1D /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFB319ACA96D007CA626 /* OpenEars.framework */; };
+		8C5E50681A3311F10047717E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E50671A3311F10047717E /* Default-568h@2x.png */; };
+		8CA3032A19CB3F040020A510 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3032919CB3F040020A510 /* TestAppDelegate.m */; };
+		8CA4BFAF19ACA917007CA626 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2F9B741507BEF20031011A /* CoreGraphics.framework */; };
+		8CA4BFB519ACA96D007CA626 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4BFB119ACA96D007CA626 /* AcousticModelEnglish.bundle */; };
+		8CA4BFB619ACA96D007CA626 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4BFB219ACA96D007CA626 /* AcousticModelSpanish.bundle */; };
+		8CA4BFB719ACA96D007CA626 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFB319ACA96D007CA626 /* OpenEars.framework */; };
+		8CA4BFBB19ACA9A7007CA626 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFB919ACA9A7007CA626 /* AudioToolbox.framework */; };
+		8CA4BFBC19ACA9A7007CA626 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFBA19ACA9A7007CA626 /* AVFoundation.framework */; };
+		8CA7340C1507D00A0016931D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA7340B1507D00A0016931D /* Icon.png */; };
+		8CB74E5819D99B43003DBD26 /* bad_silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4A19D99B43003DBD26 /* bad_silence.wav */; };
+		8CB74E5B19D99B43003DBD26 /* change_model_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4D19D99B43003DBD26 /* change_model_short.wav */; };
+		8CB74E5C19D99B43003DBD26 /* Change_model_utts.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4E19D99B43003DBD26 /* Change_model_utts.wav */; };
+		8CB74E5D19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4F19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav */; };
+		8CB74E5F19D99B43003DBD26 /* quiet_background_louder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5119D99B43003DBD26 /* quiet_background_louder.wav */; };
+		8CB74E6119D99B43003DBD26 /* Reference1Headphones.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5319D99B43003DBD26 /* Reference1Headphones.wav */; };
+		8CB74E6219D99B43003DBD26 /* Reference1InternalMic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5419D99B43003DBD26 /* Reference1InternalMic.wav */; };
+		8CB74E6419D99B43003DBD26 /* Reference2VeryBriefA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5619D99B43003DBD26 /* Reference2VeryBriefA.wav */; };
+		8CB74E6519D99B43003DBD26 /* word_statement_etc_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5719D99B43003DBD26 /* word_statement_etc_short.wav */; };
+		8CB74E6819D99B4E003DBD26 /* OELanguageModelGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB74E6619D99B4E003DBD26 /* OELanguageModelGeneratorTests.m */; };
+		8CB74E6919D99B4E003DBD26 /* OEPocketsphinxControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB74E6719D99B4E003DBD26 /* OEPocketsphinxControllerTests.m */; };
+		8CB74E7819D9A3CB003DBD26 /* bad_silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4A19D99B43003DBD26 /* bad_silence.wav */; };
+		8CB74E7B19D9A3CB003DBD26 /* change_model_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4D19D99B43003DBD26 /* change_model_short.wav */; };
+		8CB74E7C19D9A3CB003DBD26 /* Change_model_utts.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4E19D99B43003DBD26 /* Change_model_utts.wav */; };
+		8CB74E7D19D9A3CB003DBD26 /* grammar_statement_repetitions_twice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4F19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav */; };
+		8CB74E7F19D9A3CB003DBD26 /* quiet_background_louder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5119D99B43003DBD26 /* quiet_background_louder.wav */; };
+		8CB74E8119D9A3CB003DBD26 /* Reference1Headphones.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5319D99B43003DBD26 /* Reference1Headphones.wav */; };
+		8CB74E8219D9A3CB003DBD26 /* Reference1InternalMic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5419D99B43003DBD26 /* Reference1InternalMic.wav */; };
+		8CB74E8419D9A3CB003DBD26 /* Reference2VeryBriefA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5619D99B43003DBD26 /* Reference2VeryBriefA.wav */; };
+		8CB74E8519D9A3CB003DBD26 /* word_statement_etc_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5719D99B43003DBD26 /* word_statement_etc_short.wav */; };
+		8CD857891AEA83810090A493 /* Sherlock.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857881AEA83810090A493 /* Sherlock.txt */; };
+		8CD8578A1AEA83810090A493 /* Sherlock.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857881AEA83810090A493 /* Sherlock.txt */; };
+		8CD857901AEA845C0090A493 /* Sherlock.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857881AEA83810090A493 /* Sherlock.txt */; };
+		8CD857931AEA8EFC0090A493 /* Sherlock.arpa in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857911AEA8EFC0090A493 /* Sherlock.arpa */; };
+		8CD857941AEA8EFC0090A493 /* Sherlock.arpa in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857911AEA8EFC0090A493 /* Sherlock.arpa */; };
+		8CD857951AEA8EFC0090A493 /* Sherlock.arpa in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857911AEA8EFC0090A493 /* Sherlock.arpa */; };
+		8CD857961AEA8EFC0090A493 /* Sherlock.dic in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857921AEA8EFC0090A493 /* Sherlock.dic */; };
+		8CD857971AEA8EFC0090A493 /* Sherlock.dic in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857921AEA8EFC0090A493 /* Sherlock.dic */; };
+		8CD857981AEA8EFC0090A493 /* Sherlock.dic in Resources */ = {isa = PBXBuildFile; fileRef = 8CD857921AEA8EFC0090A493 /* Sherlock.dic */; };
+		8CEAD2DD19E83CC800F5A6FF /* hi_qual_statement.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8CEAD2DC19E83CC800F5A6FF /* hi_qual_statement.m4a */; };
+		8CEAD2DE19E83E4200F5A6FF /* hi_qual_statement.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8CEAD2DC19E83CC800F5A6FF /* hi_qual_statement.m4a */; };
+		8CEB79411A321C2900527803 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3032919CB3F040020A510 /* TestAppDelegate.m */; };
+		8CEB79441A321C2900527803 /* OETestTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C33F38E1A10F9CB00D56709 /* OETestTools.m */; };
+		8CEB79481A321C2900527803 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFB319ACA96D007CA626 /* OpenEars.framework */; };
+		8CEB79491A321C2900527803 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFB919ACA9A7007CA626 /* AudioToolbox.framework */; };
+		8CEB794A1A321C2900527803 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA4BFBA19ACA9A7007CA626 /* AVFoundation.framework */; };
+		8CEB794C1A321C2900527803 /* quiet_background_louder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5119D99B43003DBD26 /* quiet_background_louder.wav */; };
+		8CEB794D1A321C2900527803 /* Reference1InternalMic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5419D99B43003DBD26 /* Reference1InternalMic.wav */; };
+		8CEB794E1A321C2900527803 /* Reference2VeryBriefA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5619D99B43003DBD26 /* Reference2VeryBriefA.wav */; };
+		8CEB794F1A321C2900527803 /* bad_silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4A19D99B43003DBD26 /* bad_silence.wav */; };
+		8CEB79501A321C2900527803 /* Reference1Headphones.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5319D99B43003DBD26 /* Reference1Headphones.wav */; };
+		8CEB79511A321C2900527803 /* grammar_statement_repetitions_twice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4F19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav */; };
+		8CEB79531A321C2900527803 /* word_statement_etc_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E5719D99B43003DBD26 /* word_statement_etc_short.wav */; };
+		8CEB79541A321C2900527803 /* Change_model_utts.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4E19D99B43003DBD26 /* Change_model_utts.wav */; };
+		8CEB79561A321C2900527803 /* hi_qual_statement.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8CEAD2DC19E83CC800F5A6FF /* hi_qual_statement.m4a */; };
+		8CEB79581A321C2900527803 /* change_model_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8CB74E4D19D99B43003DBD26 /* change_model_short.wav */; };
+		8CEB795F1A321C4A00527803 /* OEPocketsphinxControllerFuzzingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB795E1A321C4A00527803 /* OEPocketsphinxControllerFuzzingTests.m */; };
+		8CEB79621A321D4900527803 /* XCTestCase+HWHorrorShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB79611A321D4900527803 /* XCTestCase+HWHorrorShow.m */; };
+		8CEE82061A5D4E0900E3B711 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4BFB119ACA96D007CA626 /* AcousticModelEnglish.bundle */; };
+		8CEE82071A5D4E0900E3B711 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4BFB119ACA96D007CA626 /* AcousticModelEnglish.bundle */; };
+		8CEE82081A5D4E0B00E3B711 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4BFB219ACA96D007CA626 /* AcousticModelSpanish.bundle */; };
+		8CEE82091A5D4E0C00E3B711 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4BFB219ACA96D007CA626 /* AcousticModelSpanish.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C5914C319B71AFF00B40F1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C2F9B631507BEF20031011A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C2F9B6B1507BEF20031011A;
+			remoteInfo = OpenEarsSampleApp;
+		};
+		8CEB793F1A321C2900527803 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C2F9B631507BEF20031011A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C2F9B6B1507BEF20031011A;
+			remoteInfo = OpenEarsSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C03F6201AF1011C00E49956 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		8C2F9B6C1507BEF20031011A /* OpenEarsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenEarsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2F9B701507BEF20031011A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C2F9B721507BEF20031011A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C2F9B741507BEF20031011A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C2F9B781507BEF20031011A /* OpenEarsSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenEarsSampleApp-Info.plist"; sourceTree = "<group>"; };
+		8C2F9B7A1507BEF20031011A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C2F9B7C1507BEF20031011A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C2F9B7E1507BEF20031011A /* OpenEarsSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenEarsSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		8C2F9B7F1507BEF20031011A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C2F9B801507BEF20031011A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C2F9B821507BEF20031011A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C2F9B831507BEF20031011A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C2F9B861507BEF30031011A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		8C2F9B891507BEF30031011A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		8C2F9B911507BEF30031011A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8C33F38D1A10F9CB00D56709 /* OETestTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OETestTools.h; path = ../../OpenEars/OpenEarsTests/OETestTools.h; sourceTree = "<group>"; };
+		8C33F38E1A10F9CB00D56709 /* OETestTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OETestTools.m; path = ../../OpenEars/OpenEarsTests/OETestTools.m; sourceTree = "<group>"; };
+		8C5914BD19B71AFF00B40F1D /* OpenEarsSampleApp Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenEarsSampleApp Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5914C019B71AFF00B40F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5E50671A3311F10047717E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8CA3032919CB3F040020A510 /* TestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppDelegate.m; sourceTree = "<group>"; };
+		8CA3032B19CB3F200020A510 /* TestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppDelegate.h; sourceTree = "<group>"; };
+		8CA4BFB119ACA96D007CA626 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		8CA4BFB219ACA96D007CA626 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		8CA4BFB319ACA96D007CA626 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		8CA4BFB919ACA9A7007CA626 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8CA4BFBA19ACA9A7007CA626 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8CA7340B1507D00A0016931D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8CB74E4A19D99B43003DBD26 /* bad_silence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bad_silence.wav; path = ../../OpenEars/OpenEarsTests/bad_silence.wav; sourceTree = "<group>"; };
+		8CB74E4D19D99B43003DBD26 /* change_model_short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = change_model_short.wav; path = ../../OpenEars/OpenEarsTests/change_model_short.wav; sourceTree = "<group>"; };
+		8CB74E4E19D99B43003DBD26 /* Change_model_utts.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Change_model_utts.wav; path = ../../OpenEars/OpenEarsTests/Change_model_utts.wav; sourceTree = "<group>"; };
+		8CB74E4F19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = grammar_statement_repetitions_twice.wav; path = ../../OpenEars/OpenEarsTests/grammar_statement_repetitions_twice.wav; sourceTree = "<group>"; };
+		8CB74E5119D99B43003DBD26 /* quiet_background_louder.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = quiet_background_louder.wav; path = ../../OpenEars/OpenEarsTests/quiet_background_louder.wav; sourceTree = "<group>"; };
+		8CB74E5319D99B43003DBD26 /* Reference1Headphones.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Reference1Headphones.wav; path = ../../OpenEars/OpenEarsTests/Reference1Headphones.wav; sourceTree = "<group>"; };
+		8CB74E5419D99B43003DBD26 /* Reference1InternalMic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Reference1InternalMic.wav; path = ../../OpenEars/OpenEarsTests/Reference1InternalMic.wav; sourceTree = "<group>"; };
+		8CB74E5619D99B43003DBD26 /* Reference2VeryBriefA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Reference2VeryBriefA.wav; path = ../../OpenEars/OpenEarsTests/Reference2VeryBriefA.wav; sourceTree = "<group>"; };
+		8CB74E5719D99B43003DBD26 /* word_statement_etc_short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = word_statement_etc_short.wav; path = ../../OpenEars/OpenEarsTests/word_statement_etc_short.wav; sourceTree = "<group>"; };
+		8CB74E6619D99B4E003DBD26 /* OELanguageModelGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OELanguageModelGeneratorTests.m; path = ../../OpenEars/OpenEarsTests/OELanguageModelGeneratorTests.m; sourceTree = "<group>"; };
+		8CB74E6719D99B4E003DBD26 /* OEPocketsphinxControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OEPocketsphinxControllerTests.m; path = ../../OpenEars/OpenEarsTests/OEPocketsphinxControllerTests.m; sourceTree = "<group>"; };
+		8CD857881AEA83810090A493 /* Sherlock.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Sherlock.txt; path = ../../OpenEars/OpenEarsTests/Sherlock.txt; sourceTree = "<group>"; };
+		8CD857911AEA8EFC0090A493 /* Sherlock.arpa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Sherlock.arpa; path = ../../OpenEars/OpenEarsTests/Sherlock.arpa; sourceTree = "<group>"; };
+		8CD857921AEA8EFC0090A493 /* Sherlock.dic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Sherlock.dic; path = ../../OpenEars/OpenEarsTests/Sherlock.dic; sourceTree = "<group>"; };
+		8CEAD2DC19E83CC800F5A6FF /* hi_qual_statement.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hi_qual_statement.m4a; sourceTree = "<group>"; };
+		8CEB795C1A321C2900527803 /* OpenEarsSampleApp Tests copy.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenEarsSampleApp Tests copy.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEB795D1A321C2900527803 /* OpenEarsSampleApp Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OpenEarsSampleApp Tests copy-Info.plist"; path = "$(PROJECT_DIR)/../../OpenEarsDistribution/OpenEarsSampleApp/OpenEarsSampleApp Tests copy-Info.plist"; sourceTree = "<absolute>"; };
+		8CEB795E1A321C4A00527803 /* OEPocketsphinxControllerFuzzingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEPocketsphinxControllerFuzzingTests.m; path = ../../OpenEars/OpenEarsTests/OEPocketsphinxControllerFuzzingTests.m; sourceTree = "<group>"; };
+		8CEB79601A321D4900527803 /* XCTestCase+HWHorrorShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+HWHorrorShow.h"; path = "../../OpenEars/OpenEarsTests/XCTestCase+HWHorrorShow.h"; sourceTree = "<group>"; };
+		8CEB79611A321D4900527803 /* XCTestCase+HWHorrorShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+HWHorrorShow.m"; path = "../../OpenEars/OpenEarsTests/XCTestCase+HWHorrorShow.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C2F9B691507BEF20031011A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA4BFBB19ACA9A7007CA626 /* AudioToolbox.framework in Frameworks */,
+				8C03F6211AF1011C00E49956 /* Slt.framework in Frameworks */,
+				8CA4BFBC19ACA9A7007CA626 /* AVFoundation.framework in Frameworks */,
+				8CA4BFAF19ACA917007CA626 /* CoreGraphics.framework in Frameworks */,
+				8C2F9B711507BEF20031011A /* UIKit.framework in Frameworks */,
+				8C2F9B731507BEF20031011A /* Foundation.framework in Frameworks */,
+				8CA4BFB719ACA96D007CA626 /* OpenEars.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5914BA19B71AFF00B40F1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C03F6221AF1011C00E49956 /* Slt.framework in Frameworks */,
+				8C5914CC19B71B3500B40F1D /* OpenEars.framework in Frameworks */,
+				8C5914C819B71B0E00B40F1D /* AudioToolbox.framework in Frameworks */,
+				8C5914C919B71B0E00B40F1D /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CEB79461A321C2900527803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C03F6231AF1011C00E49956 /* Slt.framework in Frameworks */,
+				8CEB79481A321C2900527803 /* OpenEars.framework in Frameworks */,
+				8CEB79491A321C2900527803 /* AudioToolbox.framework in Frameworks */,
+				8CEB794A1A321C2900527803 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C2F9B611507BEF20031011A = {
+			isa = PBXGroup;
+			children = (
+				8CA4BFB019ACA96D007CA626 /* Framework */,
+				8C2F9B761507BEF20031011A /* OpenEarsSampleApp */,
+				8C5914BE19B71AFF00B40F1D /* OpenEarsSampleApp Tests */,
+				8C2F9B6F1507BEF20031011A /* Frameworks */,
+				8C2F9B6D1507BEF20031011A /* Products */,
+				8CEB795D1A321C2900527803 /* OpenEarsSampleApp Tests copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		8C2F9B6D1507BEF20031011A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C2F9B6C1507BEF20031011A /* OpenEarsSampleApp.app */,
+				8C5914BD19B71AFF00B40F1D /* OpenEarsSampleApp Tests.xctest */,
+				8CEB795C1A321C2900527803 /* OpenEarsSampleApp Tests copy.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C2F9B6F1507BEF20031011A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CA4BFB919ACA9A7007CA626 /* AudioToolbox.framework */,
+				8CA4BFBA19ACA9A7007CA626 /* AVFoundation.framework */,
+				8C2F9B701507BEF20031011A /* UIKit.framework */,
+				8C2F9B721507BEF20031011A /* Foundation.framework */,
+				8C2F9B741507BEF20031011A /* CoreGraphics.framework */,
+				8C2F9B911507BEF30031011A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C2F9B761507BEF20031011A /* OpenEarsSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				8C2F9B7F1507BEF20031011A /* AppDelegate.h */,
+				8C2F9B801507BEF20031011A /* AppDelegate.m */,
+				8CA3032B19CB3F200020A510 /* TestAppDelegate.h */,
+				8CA3032919CB3F040020A510 /* TestAppDelegate.m */,
+				8C2F9B821507BEF20031011A /* ViewController.h */,
+				8C2F9B831507BEF20031011A /* ViewController.m */,
+				8C2F9B851507BEF30031011A /* ViewController_iPhone.xib */,
+				8C2F9B881507BEF30031011A /* ViewController_iPad.xib */,
+				8C2F9B771507BEF20031011A /* Supporting Files */,
+			);
+			path = OpenEarsSampleApp;
+			sourceTree = "<group>";
+		};
+		8C2F9B771507BEF20031011A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E50671A3311F10047717E /* Default-568h@2x.png */,
+				8CA7340B1507D00A0016931D /* Icon.png */,
+				8CEAD2DC19E83CC800F5A6FF /* hi_qual_statement.m4a */,
+				8C2F9B781507BEF20031011A /* OpenEarsSampleApp-Info.plist */,
+				8C2F9B791507BEF20031011A /* InfoPlist.strings */,
+				8C2F9B7C1507BEF20031011A /* main.m */,
+				8C2F9B7E1507BEF20031011A /* OpenEarsSampleApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C5914BE19B71AFF00B40F1D /* OpenEarsSampleApp Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8C33F38D1A10F9CB00D56709 /* OETestTools.h */,
+				8C33F38E1A10F9CB00D56709 /* OETestTools.m */,
+				8CB74E6619D99B4E003DBD26 /* OELanguageModelGeneratorTests.m */,
+				8CB74E6719D99B4E003DBD26 /* OEPocketsphinxControllerTests.m */,
+				8CEB795E1A321C4A00527803 /* OEPocketsphinxControllerFuzzingTests.m */,
+				8CEB79601A321D4900527803 /* XCTestCase+HWHorrorShow.h */,
+				8CEB79611A321D4900527803 /* XCTestCase+HWHorrorShow.m */,
+				8C5914BF19B71AFF00B40F1D /* Supporting Files */,
+			);
+			path = "OpenEarsSampleApp Tests";
+			sourceTree = "<group>";
+		};
+		8C5914BF19B71AFF00B40F1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CD857911AEA8EFC0090A493 /* Sherlock.arpa */,
+				8CD857921AEA8EFC0090A493 /* Sherlock.dic */,
+				8CD857881AEA83810090A493 /* Sherlock.txt */,
+				8CB74E4A19D99B43003DBD26 /* bad_silence.wav */,
+				8CB74E4D19D99B43003DBD26 /* change_model_short.wav */,
+				8CB74E4E19D99B43003DBD26 /* Change_model_utts.wav */,
+				8CB74E4F19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav */,
+				8CB74E5119D99B43003DBD26 /* quiet_background_louder.wav */,
+				8CB74E5319D99B43003DBD26 /* Reference1Headphones.wav */,
+				8CB74E5419D99B43003DBD26 /* Reference1InternalMic.wav */,
+				8CB74E5619D99B43003DBD26 /* Reference2VeryBriefA.wav */,
+				8CB74E5719D99B43003DBD26 /* word_statement_etc_short.wav */,
+				8C5914C019B71AFF00B40F1D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CA4BFB019ACA96D007CA626 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				8CA4BFB119ACA96D007CA626 /* AcousticModelEnglish.bundle */,
+				8CA4BFB219ACA96D007CA626 /* AcousticModelSpanish.bundle */,
+				8CA4BFB319ACA96D007CA626 /* OpenEars.framework */,
+				8C03F6201AF1011C00E49956 /* Slt.framework */,
+			);
+			name = Framework;
+			path = ../Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C2F9B6B1507BEF20031011A /* OpenEarsSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C2F9BA21507BEF30031011A /* Build configuration list for PBXNativeTarget "OpenEarsSampleApp" */;
+			buildPhases = (
+				8C2F9B681507BEF20031011A /* Sources */,
+				8C2F9B691507BEF20031011A /* Frameworks */,
+				8C2F9B6A1507BEF20031011A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenEarsSampleApp;
+			productName = OpenEarsSampleApp;
+			productReference = 8C2F9B6C1507BEF20031011A /* OpenEarsSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C5914BC19B71AFF00B40F1D /* OpenEarsSampleApp Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5914C519B71AFF00B40F1D /* Build configuration list for PBXNativeTarget "OpenEarsSampleApp Tests" */;
+			buildPhases = (
+				8C5914B919B71AFF00B40F1D /* Sources */,
+				8C5914BA19B71AFF00B40F1D /* Frameworks */,
+				8C5914BB19B71AFF00B40F1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5914C419B71AFF00B40F1D /* PBXTargetDependency */,
+			);
+			name = "OpenEarsSampleApp Tests";
+			productName = "OpenEarsSampleApp Tests";
+			productReference = 8C5914BD19B71AFF00B40F1D /* OpenEarsSampleApp Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CEB793D1A321C2900527803 /* OpenEarsSampleApp Fuzzing Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CEB79591A321C2900527803 /* Build configuration list for PBXNativeTarget "OpenEarsSampleApp Fuzzing Tests" */;
+			buildPhases = (
+				8CEB79401A321C2900527803 /* Sources */,
+				8CEB79461A321C2900527803 /* Frameworks */,
+				8CEB794B1A321C2900527803 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CEB793E1A321C2900527803 /* PBXTargetDependency */,
+			);
+			name = "OpenEarsSampleApp Fuzzing Tests";
+			productName = "OpenEarsSampleApp Tests";
+			productReference = 8CEB795C1A321C2900527803 /* OpenEarsSampleApp Tests copy.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C2F9B631507BEF20031011A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Politepix;
+				TargetAttributes = {
+					8C5914BC19B71AFF00B40F1D = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 8C2F9B6B1507BEF20031011A;
+					};
+				};
+			};
+			buildConfigurationList = 8C2F9B661507BEF20031011A /* Build configuration list for PBXProject "OpenEarsSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C2F9B611507BEF20031011A;
+			productRefGroup = 8C2F9B6D1507BEF20031011A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C2F9B6B1507BEF20031011A /* OpenEarsSampleApp */,
+				8C5914BC19B71AFF00B40F1D /* OpenEarsSampleApp Tests */,
+				8CEB793D1A321C2900527803 /* OpenEarsSampleApp Fuzzing Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C2F9B6A1507BEF20031011A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2F9B7B1507BEF20031011A /* InfoPlist.strings in Resources */,
+				8CB74E7D19D9A3CB003DBD26 /* grammar_statement_repetitions_twice.wav in Resources */,
+				8CB74E8119D9A3CB003DBD26 /* Reference1Headphones.wav in Resources */,
+				8CA4BFB619ACA96D007CA626 /* AcousticModelSpanish.bundle in Resources */,
+				8CB74E7F19D9A3CB003DBD26 /* quiet_background_louder.wav in Resources */,
+				8CD857901AEA845C0090A493 /* Sherlock.txt in Resources */,
+				8C2F9B871507BEF30031011A /* ViewController_iPhone.xib in Resources */,
+				8CB74E8519D9A3CB003DBD26 /* word_statement_etc_short.wav in Resources */,
+				8CB74E7B19D9A3CB003DBD26 /* change_model_short.wav in Resources */,
+				8C5E50681A3311F10047717E /* Default-568h@2x.png in Resources */,
+				8CEAD2DE19E83E4200F5A6FF /* hi_qual_statement.m4a in Resources */,
+				8C2F9B8A1507BEF30031011A /* ViewController_iPad.xib in Resources */,
+				8CD857931AEA8EFC0090A493 /* Sherlock.arpa in Resources */,
+				8CD857961AEA8EFC0090A493 /* Sherlock.dic in Resources */,
+				8CA4BFB519ACA96D007CA626 /* AcousticModelEnglish.bundle in Resources */,
+				8CB74E8219D9A3CB003DBD26 /* Reference1InternalMic.wav in Resources */,
+				8CB74E7C19D9A3CB003DBD26 /* Change_model_utts.wav in Resources */,
+				8CB74E7819D9A3CB003DBD26 /* bad_silence.wav in Resources */,
+				8CB74E8419D9A3CB003DBD26 /* Reference2VeryBriefA.wav in Resources */,
+				8CA7340C1507D00A0016931D /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5914BB19B71AFF00B40F1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB74E5F19D99B43003DBD26 /* quiet_background_louder.wav in Resources */,
+				8CEE82081A5D4E0B00E3B711 /* AcousticModelSpanish.bundle in Resources */,
+				8CB74E6219D99B43003DBD26 /* Reference1InternalMic.wav in Resources */,
+				8CB74E6419D99B43003DBD26 /* Reference2VeryBriefA.wav in Resources */,
+				8CB74E5819D99B43003DBD26 /* bad_silence.wav in Resources */,
+				8CB74E6119D99B43003DBD26 /* Reference1Headphones.wav in Resources */,
+				8CD857941AEA8EFC0090A493 /* Sherlock.arpa in Resources */,
+				8CD857891AEA83810090A493 /* Sherlock.txt in Resources */,
+				8CD857971AEA8EFC0090A493 /* Sherlock.dic in Resources */,
+				8CB74E5D19D99B43003DBD26 /* grammar_statement_repetitions_twice.wav in Resources */,
+				8CB74E6519D99B43003DBD26 /* word_statement_etc_short.wav in Resources */,
+				8CB74E5C19D99B43003DBD26 /* Change_model_utts.wav in Resources */,
+				8CEAD2DD19E83CC800F5A6FF /* hi_qual_statement.m4a in Resources */,
+				8CEE82061A5D4E0900E3B711 /* AcousticModelEnglish.bundle in Resources */,
+				8CB74E5B19D99B43003DBD26 /* change_model_short.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CEB794B1A321C2900527803 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CEB794C1A321C2900527803 /* quiet_background_louder.wav in Resources */,
+				8CEE82091A5D4E0C00E3B711 /* AcousticModelSpanish.bundle in Resources */,
+				8CEB794D1A321C2900527803 /* Reference1InternalMic.wav in Resources */,
+				8CEB794E1A321C2900527803 /* Reference2VeryBriefA.wav in Resources */,
+				8CEB794F1A321C2900527803 /* bad_silence.wav in Resources */,
+				8CEB79501A321C2900527803 /* Reference1Headphones.wav in Resources */,
+				8CD857951AEA8EFC0090A493 /* Sherlock.arpa in Resources */,
+				8CD8578A1AEA83810090A493 /* Sherlock.txt in Resources */,
+				8CD857981AEA8EFC0090A493 /* Sherlock.dic in Resources */,
+				8CEB79511A321C2900527803 /* grammar_statement_repetitions_twice.wav in Resources */,
+				8CEB79531A321C2900527803 /* word_statement_etc_short.wav in Resources */,
+				8CEB79541A321C2900527803 /* Change_model_utts.wav in Resources */,
+				8CEB79561A321C2900527803 /* hi_qual_statement.m4a in Resources */,
+				8CEE82071A5D4E0900E3B711 /* AcousticModelEnglish.bundle in Resources */,
+				8CEB79581A321C2900527803 /* change_model_short.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C2F9B681507BEF20031011A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2F9B7D1507BEF20031011A /* main.m in Sources */,
+				8C2F9B811507BEF20031011A /* AppDelegate.m in Sources */,
+				8C2F9B841507BEF20031011A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5914B919B71AFF00B40F1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3A7C481A5C426A00DF3791 /* ViewController.m in Sources */,
+				8CA3032A19CB3F040020A510 /* TestAppDelegate.m in Sources */,
+				8CB74E6919D99B4E003DBD26 /* OEPocketsphinxControllerTests.m in Sources */,
+				8C33F38F1A10F9CB00D56709 /* OETestTools.m in Sources */,
+				8CB74E6819D99B4E003DBD26 /* OELanguageModelGeneratorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CEB79401A321C2900527803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3A7C491A5C426A00DF3791 /* ViewController.m in Sources */,
+				8CEB79411A321C2900527803 /* TestAppDelegate.m in Sources */,
+				8CEB795F1A321C4A00527803 /* OEPocketsphinxControllerFuzzingTests.m in Sources */,
+				8CEB79621A321D4900527803 /* XCTestCase+HWHorrorShow.m in Sources */,
+				8CEB79441A321C2900527803 /* OETestTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C5914C419B71AFF00B40F1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C2F9B6B1507BEF20031011A /* OpenEarsSampleApp */;
+			targetProxy = 8C5914C319B71AFF00B40F1D /* PBXContainerItemProxy */;
+		};
+		8CEB793E1A321C2900527803 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C2F9B6B1507BEF20031011A /* OpenEarsSampleApp */;
+			targetProxy = 8CEB793F1A321C2900527803 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C2F9B791507BEF20031011A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2F9B7A1507BEF20031011A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C2F9B851507BEF30031011A /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2F9B861507BEF30031011A /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		8C2F9B881507BEF30031011A /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2F9B891507BEF30031011A /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C2F9BA01507BEF30031011A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C2F9BA11507BEF30031011A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C2F9BA31507BEF30031011A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../Framework/\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenEarsSampleApp/OpenEarsSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "OpenEarsSampleApp/OpenEarsSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C2F9BA41507BEF30031011A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../Framework/\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenEarsSampleApp/OpenEarsSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "OpenEarsSampleApp/OpenEarsSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8C5914C619B71AFF00B40F1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../Framework/\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${PROJECT_DIR}/../OpenEars/Dependencies",
+				);
+				INFOPLIST_FILE = "OpenEarsSampleApp Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenEarsSampleApp.app/OpenEarsSampleApp";
+			};
+			name = Debug;
+		};
+		8C5914C719B71AFF00B40F1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../Framework/\"",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${PROJECT_DIR}/../OpenEars/Dependencies",
+				);
+				INFOPLIST_FILE = "OpenEarsSampleApp Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenEarsSampleApp.app/OpenEarsSampleApp";
+			};
+			name = Release;
+		};
+		8CEB795A1A321C2900527803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../OpenEarsDistribution/Framework",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${PROJECT_DIR}/../OpenEars/Dependencies",
+				);
+				INFOPLIST_FILE = "OpenEarsSampleApp Tests copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "OpenEarsSampleApp Tests copy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenEarsSampleApp.app/OpenEarsSampleApp";
+			};
+			name = Debug;
+		};
+		8CEB795B1A321C2900527803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../OpenEarsDistribution/Framework",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${PROJECT_DIR}/../OpenEars/Dependencies",
+				);
+				INFOPLIST_FILE = "OpenEarsSampleApp Tests copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "OpenEarsSampleApp Tests copy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenEarsSampleApp.app/OpenEarsSampleApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C2F9B661507BEF20031011A /* Build configuration list for PBXProject "OpenEarsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2F9BA01507BEF30031011A /* Debug */,
+				8C2F9BA11507BEF30031011A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C2F9BA21507BEF30031011A /* Build configuration list for PBXNativeTarget "OpenEarsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2F9BA31507BEF30031011A /* Debug */,
+				8C2F9BA41507BEF30031011A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5914C519B71AFF00B40F1D /* Build configuration list for PBXNativeTarget "OpenEarsSampleApp Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5914C619B71AFF00B40F1D /* Debug */,
+				8C5914C719B71AFF00B40F1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CEB79591A321C2900527803 /* Build configuration list for PBXNativeTarget "OpenEarsSampleApp Fuzzing Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CEB795A1A321C2900527803 /* Debug */,
+				8CEB795B1A321C2900527803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C2F9B631507BEF20031011A /* Project object */;
+}

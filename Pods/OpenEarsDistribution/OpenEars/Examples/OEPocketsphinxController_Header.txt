@@ -1,0 +1,7 @@
+<p>To use OEPocketsphinxController, the class which performs speech recognition, you need a language model and a phonetic dictionary for it. These files define which words OEPocketsphinxController is capable of recognizing. We just created them above by using OELanguageModelGenerator. You also need an acoustic model. OpenEars ships with an English and a Spanish acoustic model.</p>
+
+First, add the following to your implementation (the .m file): Under the @implementation keyword at the top:
+<pre>
+#import &lt;OpenEars/OEPocketsphinxController.h&gt;
+#import &lt;OpenEars/OEAcousticModel.h&gt;
+</pre>

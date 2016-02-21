@@ -1,0 +1,9 @@
+In offline speech recognition, you define the vocabulary that you want your app to be able to recognize. This is called a language model or grammar (you can read more about these options in the OELanguageModelGenerator documentation). A good vocabulary size for an offline speech recognition app on the iPhone, iPod or iPad is between 10 and 500 words.
+
+Add the following to your implementation (the .m file):
+
+Under the @interface keyword at the top:
+<pre>
+#import &lt;OpenEars/OELanguageModelGenerator.h&gt;
+#import &lt;OpenEars/OEAcousticModel.h&gt;
+</pre>

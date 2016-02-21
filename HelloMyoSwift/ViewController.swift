@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, OEEventsObserverDelegate{
 
     @IBOutlet weak var accelerationProgressBar: UIProgressView!
     @IBOutlet weak var helloLabel: UILabel!

@@ -1,0 +1,6 @@
+Add the following to your implementation (the .m file):
+
+Wherever you'd like to use OEPocketsphinxController in your app, you will reference it as a sharedInstance (instead of instantiating it with init/alloc or new):
+<pre>
+[OEPocketsphinxController sharedInstance]
+</pre>

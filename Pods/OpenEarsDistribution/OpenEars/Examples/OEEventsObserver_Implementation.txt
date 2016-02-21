@@ -1,0 +1,8 @@
+Add the following to your implementation (the .m file):
+
+Before you call a method of either OEFliteController or OEPocketsphinxController (perhaps in viewDidLoad), instantiate OEEventsObserver and set its delegate as follows:
+
+<pre>
+self.openEarsEventsObserver = [[OEEventsObserver alloc] init];
+[self.openEarsEventsObserver setDelegate:self];
+</pre>

@@ -4,4 +4,7 @@
 #import <MyoKit/MyoKit.h>
 #import "HelloMyoSwift/GLKitPolyfill.h"
 
+#import <OpenEars/OELanguageModelGenerator.h>
+#import <OpenEars/OEAcousticModel.h>
+#import <OpenEars/OEEventsObserver.h>
 #endif

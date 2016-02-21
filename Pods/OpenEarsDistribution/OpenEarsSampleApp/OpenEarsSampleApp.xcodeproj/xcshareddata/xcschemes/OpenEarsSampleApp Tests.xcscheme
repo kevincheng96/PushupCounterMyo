@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0600"
+   version = "2.0">
+   <BuildAction
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8C2F9B6B1507BEF20031011A"
+               BuildableName = "OpenEarsSampleApp.app"
+               BlueprintName = "OpenEarsSampleApp"
+               ReferencedContainer = "container:OpenEarsSampleApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8C5914BC19B71AFF00B40F1D"
+               BuildableName = "OpenEarsSampleApp Tests.xctest"
+               BlueprintName = "OpenEarsSampleApp Tests"
+               ReferencedContainer = "container:OpenEarsSampleApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8C5914BC19B71AFF00B40F1D"
+               BuildableName = "OpenEarsSampleApp Tests.xctest"
+               BlueprintName = "OpenEarsSampleApp Tests"
+               ReferencedContainer = "container:OpenEarsSampleApp.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "OEPocketsphinxControllerTests/testThatPocketsphinxCanDealWithRouteChangesAndInterruptionsAndResets">
+               </Test>
+               <Test
+                  Identifier = "OEPocketsphinxControllerTests/testThatPocketsphinxCanRandomlyStartAndStopWithoutCrashingAndHoldUp">
+               </Test>
+               <Test
+                  Identifier = "OEPocketsphinxControllerTests/testThatPocketsphinxDoesNotCrashOnAudioUnitRenderDuringCrossThreadAccess">
+               </Test>
+               <Test
+                  Identifier = "OEPocketsphinxControllerTests/testThatPocketsphinxDoesntCrashRepeatedlyChangingRoutes">
+               </Test>
+               <Test
+                  Identifier = "OEPocketsphinxControllerTests/testThatPocketsphinxDoesntCrashWhenRestartingAfterAnAudioSessionInterruption">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8C5914BC19B71AFF00B40F1D"
+            BuildableName = "OpenEarsSampleApp Tests.xctest"
+            BlueprintName = "OpenEarsSampleApp Tests"
+            ReferencedContainer = "container:OpenEarsSampleApp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugXPCServices = "NO"
+      enableGPUFrameCaptureMode = "3"
+      allowLocationSimulation = "NO"
+      viewDebuggingEnabled = "No">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8C5914BC19B71AFF00B40F1D"
+            BuildableName = "OpenEarsSampleApp Tests.xctest"
+            BlueprintName = "OpenEarsSampleApp Tests"
+            ReferencedContainer = "container:OpenEarsSampleApp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

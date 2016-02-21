@@ -1,0 +1,8 @@
+Add the following to your implementation (the .m file):
+
+Before you want to use TTS speech in your app, instantiate an OEFliteController and a voice as follows (perhaps in your view controller's viewDidLoad method):
+
+<pre>
+		self.fliteController = [[OEFliteController alloc] init];
+		self.slt = [[Slt alloc] init];
+</pre>

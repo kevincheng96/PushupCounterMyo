@@ -1,0 +1,16 @@
+OEEventsObserver is the class which keeps you continuously updated about the status of your listening session, among other things, via delegate callbacks.
+
+Add the following lines to your header (the .h file). Under the imports at the very top:
+<pre>
+#import &lt;OpenEars/OEEventsObserver.h&gt;
+</pre>
+at the @interface declaration, add the OEEventsObserverDelegate inheritance. 
+
+An example of this for a view controller called ViewController would look like this:
+<pre>
+@interface ViewController : UIViewController &lt;OEEventsObserverDelegate&gt
+</pre>
+And add this property to your other class properties (OEEventsObserver must be a property of your class or it will not work):
+<pre>
+@property (strong, nonatomic) OEEventsObserver *openEarsEventsObserver;
+</pre>

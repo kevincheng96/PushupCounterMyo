@@ -89,6 +89,8 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 #endif
 
+#import "/Users/john/Desktop/PushupCounterMyo/bridge.h"
+
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class UIWindow;
@@ -107,28 +109,39 @@ SWIFT_CLASS("_TtC13HelloMyoSwift11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextField;
 @class TLMPose;
 @class NSNotification;
 @class UIProgressView;
 @class UILabel;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC13HelloMyoSwift14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <OEEventsObserverDelegate>
 @property (nonatomic, weak) IBOutlet UIProgressView * __null_unspecified accelerationProgressBar;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified helloLabel;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified accelerationLabel;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified armLabel;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified gyroscopeLabel;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified button1;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified pushText;
+@property (nonatomic, strong) IBOutlet UITextField * __null_unspecified stateText;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified yawText;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified rowText;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified num;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified pitchText;
+@property (nonatomic) NSInteger pushUpsDone;
 @property (nonatomic, strong) TLMPose * __null_unspecified currentPose;
+@property (nonatomic) NSInteger pushUpState;
+@property (nonatomic) NSInteger quaternionCounter;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)didTapSettings:(id __nonnull)sender;
+- (IBAction)getCurrentPosition:(id __nonnull)sender;
 - (void)didConnectDevice:(NSNotification * __nonnull)notification;
 - (void)didDisconnectDevice:(NSNotification * __nonnull)notification;
-- (void)didRecognizeArm:(NSNotification * __nonnull)notification;
-- (void)didLoseArm:(NSNotification * __nonnull)notification;
 - (void)didRecieveOrientationEvent:(NSNotification * __nonnull)notification;
 - (void)didRecieveAccelerationEvent:(NSNotification * __nonnull)notification;
 - (void)didChangePose:(NSNotification * __nonnull)notification;

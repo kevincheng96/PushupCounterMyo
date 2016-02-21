@@ -1,0 +1,4 @@
+After having initialized your OEFliteController, add the following message in a method where you want to call speech:
+<pre>
+[self.fliteController say:@"A short statement" withVoice:self.slt];
+</pre>
