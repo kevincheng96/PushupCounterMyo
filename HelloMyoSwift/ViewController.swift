@@ -2,22 +2,13 @@ import UIKit
 
 class ViewController: UIViewController, OEEventsObserverDelegate{
 
-    @IBOutlet weak var accelerationProgressBar: UIProgressView!
-    @IBOutlet weak var helloLabel: UILabel!
-    @IBOutlet weak var accelerationLabel: UILabel!
-    @IBOutlet weak var armLabel: UILabel!
-    @IBOutlet weak var gyroscopeLabel: UILabel!
-    
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
-    
-    @IBOutlet weak var pushText: UITextField!
-
-    @IBOutlet var stateText: UITextField!
-    @IBOutlet weak var yawText: UITextField!
-    @IBOutlet weak var rowText: UITextField!
+    @IBOutlet weak var highscoreLabel: UILabel!
     @IBOutlet weak var num: UITextField!
-    @IBOutlet weak var pitchText: UITextField!
+    @IBOutlet weak var pushText: UITextField!
+    @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var reset: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     var pushUpsDone = 0 // pushup counters
     var currentPose: TLMPose!
     var pushUpState = 0 // finite state machine (0=top of pushup, 1=bottom of pushup)
@@ -26,29 +17,35 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     var quaternionCounter = 0 // counter to limit the amount of times that app receives orientation events
     var openEarsEventsObserver = OEEventsObserver() //start listening to audios 
     var timer = NSTimer()
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var highscore:Int = 0
     
     var lmPath: String! //path to the English packet
     var dicPath: String! //path to dictionary
-    var words: Array<String> = ["START PUSHUP" , "STOP"]
+    var words: Array<String> = ["START" , "STOP"]
     var currentWord: String!
+    var tempCount = 0
     
     var stop = 0
     var start = 0
     
     var counter = 0 //countdown counter
     var sum = 3
+    var quarternionCounter = 0 //lolol quarternion
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let notifier = NSNotificationCenter.defaultCenter()
         loadOpenEars()
         pushText.hidden = true
-        stateText.text = "up"
-        resetButton.hidden = true
+    
+        num.hidden = true
+        reset.hidden = true
+        startButton.hidden = true
+        stopButton.hidden = true
+        highscoreLabel.hidden = true
         
-        var timer: NSTimer;// = NSTimer.timerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true) //timer Interval 1 second
-        startListening()
+//        startListening()
         // Data notifications are received through NSNotificationCenter.
         notifier.addObserver(self, selector: "didConnectDevice:", name: TLMHubDidConnectDeviceNotification, object: nil)
         notifier.addObserver(self, selector: "didDisconnectDevice:", name: TLMHubDidDisconnectDeviceNotification, object: nil)
@@ -60,6 +57,11 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         // Posted when one of the pre-configued geatures is recognized (e.g. Fist, Wave In, Wave Out, etc)
         notifier.addObserver(self, selector: "didChangePose:", name: TLMMyoDidReceivePoseChangedNotification, object: nil)
         notifier.addObserver(self, selector: "didRecieveGyroScopeEvent:", name: TLMMyoDidReceiveGyroscopeEventNotification, object: nil)
+        if (defaults.objectForKey("highscore") == nil) {
+            defaults.setInteger(0, forKey: "highscore")
+            defaults.synchronize()
+        }
+        highscoreLabel.text = "High Score: " + String(highscore)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -86,17 +88,14 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         presentViewController(controller, animated: true, completion: nil)
     }
     
-    @IBAction func getCurrentPosition(sender: AnyObject) { //initilaize the height
-        startPosition = currentPosition
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
-        
-    }
-    
     //band is connected
     func didConnectDevice(notification: NSNotification) {
-        button1.hidden = true
+        self.connectButton.hidden = true
         pushText.hidden = false
-        resetButton.hidden = false
+        pushText.text = "Say 'Start' to start"
+        startButton.hidden = false
+        highscoreLabel.hidden = false
+        startListening()
         
         
         //    helloLabel.center = self.view.center
@@ -108,10 +107,20 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     }
     
     func didDisconnectDevice(notification: NSNotification) {
-        helloLabel.text = ""
-        armLabel.text = ""
-        accelerationProgressBar.hidden = true
-        accelerationLabel.hidden = true
+        
+    }
+    
+    @IBAction func getCurrentPosition(sender: AnyObject) {
+        print("i am at current position")
+        counter = 0
+        startPosition = currentPosition
+        //stopButton.hidden = false
+        startButton.hidden = true
+        pushText.text = ""
+        //pushText.text = "Say 'Stop' to stop"
+        num.text = ""
+        num.hidden = false
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     
     @IBAction func resetButton(sender: AnyObject) { //reset
@@ -119,12 +128,29 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         stop = 0
         num.text = "0"
         counter = 0
+        startButton.hidden = false
+        reset.hidden = true
+        pushText.text = "Say 'Start' to start"
+    }
+    
+
+    @IBAction func stopPushUps(sender: AnyObject) {
+        stop = 1
+        stopButton.hidden = true
+        reset.hidden = false
+        pushText.text = "Hit Reset to Start Over"
     }
     
     func didRecieveOrientationEvent(notification: NSNotification) {
         quaternionCounter++ // counter to limit calls to ReceiveOrientationEvent
         if (quaternionCounter < 7) {
             return
+        }
+        
+        if (num.text == "START" && tempCount == 6) { // loop to change "start" to "0" smoothly
+            num.text = "0"
+        } else if (num.text == "START") {
+            tempCount++
         }
         
         let eventData = notification.userInfo as! Dictionary<NSString, TLMOrientationEvent>
@@ -135,11 +161,9 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         let yaw = CGFloat(angles.yaw.radians)
         let roll = CGFloat(angles.roll.radians)
         let rotationAndPerspectiveTransform:CATransform3D = CATransform3DConcat(CATransform3DConcat(CATransform3DRotate (CATransform3DIdentity, pitch, -1.0, 0.0, 0.0), CATransform3DRotate(CATransform3DIdentity, yaw, 0.0, 1.0, 0.0)), CATransform3DRotate(CATransform3DIdentity, roll, 0.0, 0.0, -1.0))
-        yawText.text = "Yaw: " + (NSString(format: "%.2f", yaw) as String) as String
-        rowText.text = "Roll: " + (NSString(format: "%.2f", roll) as String) as String
-        pitchText.text = "Pitch: " + (NSString(format: "%.2f", pitch) as String) as String
+       
         // Apply the rotation and perspective transform to helloLabel.
-        helloLabel.layer.transform = rotationAndPerspectiveTransform
+       
         
         currentPosition = (pitch, yaw, roll)
         if (startPosition != nil && stop == 0) { //execute when start is recognized and stop not recognized
@@ -151,7 +175,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
                     if (rollDiff < -1.1) { // roll difference threshold
                         pushUpState = 1 // change state to 1
                         startPosition = currentPosition
-                        stateText.text = "down"
+                        
                     }
                 }
             } else if (pushUpState == 1) {
@@ -163,12 +187,21 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
                         pushUpsDone += 1
                         startPosition = currentPosition
                         num.text = String(pushUpsDone)
-                        stateText.text = "up"
+                       
                     }
                 }
             }
         }
         quaternionCounter = 0
+        
+        if (stop == 1) {
+            if (pushUpsDone > highscore) {
+                defaults.setInteger(pushUpsDone, forKey: "highscore")
+                defaults.synchronize()
+            }
+        }
+        highscore = defaults.integerForKey("highscore")
+        highscoreLabel.text = "High Score: " + String(highscore)
     }
     
     func didRecieveAccelerationEvent(notification: NSNotification) {
@@ -176,11 +209,11 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         let accelerometerEvent = eventData[kTLMKeyAccelerometerEvent]!
         
         let acceleration = GLKitPolyfill.getAcceleration(accelerometerEvent);
-        accelerationProgressBar.progress = acceleration.magnitude / 4.0;
-   
+       
+
     }
    
-    func didChangePose(notification: NSNotification) {
+    /*func didChangePose(notification: NSNotification) {
         let eventData = notification.userInfo as! Dictionary<NSString, TLMPose>
         currentPose = eventData[kTLMKeyPose]!
         
@@ -210,7 +243,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
             helloLabel.font = UIFont(name: "Helvetica Neue", size: 50)
             helloLabel.textColor = UIColor.blackColor()
         }
-    }
+    }*/
     
     func didRecieveGyroScopeEvent(notification: NSNotification) {
         let eventData = notification.userInfo as! Dictionary<NSString, TLMGyroscopeEvent>
@@ -240,10 +273,13 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     }
   
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        if hypothesis == "START PUSHUP" && start == 0 { // start recognized the first time
+        if (hypothesis == "START" && start == 0) { // start recognized the first time
+            startButton.hidden = true
+            pushText.text = ""
             start = 1
             print("start is : " + String(start))
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+            
             //schedule the timer on the view run loop
         }
         
@@ -251,6 +287,9 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
             stop = 1
             startPosition = nil
             start = 0
+            stopButton.hidden = true
+            reset.hidden = false
+            pushText.text = "Hit Reset to Start Over"
             print("stop is : " + String(stop))
             //unschedule the timer on the view run loop
         }
@@ -265,7 +304,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
         do {
             try OEPocketsphinxController.sharedInstance().setActive(true)
             OEPocketsphinxController.sharedInstance().secondsOfSilenceToDetect = 0.001
-            OEPocketsphinxController.sharedInstance().vadThreshold = 1.5
+            OEPocketsphinxController.sharedInstance().vadThreshold = 4
             OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
             
         } catch {
@@ -279,15 +318,21 @@ class ViewController: UIViewController, OEEventsObserverDelegate{
     
     
     func update() { //update Time
+        print("goes into update")
         if(counter < 3)
         {
             if(counter == 1) {//register initial state at the 2nd second
                 startPosition = currentPosition
             }
+            num.hidden = false
             num.text = String(sum - counter)
             counter += 1
         } else if (counter == 3){
             num.text = "START"
+            counter++
+            timer.invalidate()
+            stopButton.hidden = false
+            pushText.text = "Say 'Stop' to stop"
         }
     }
     
